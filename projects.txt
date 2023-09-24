@@ -1,0 +1,1168 @@
+Inspiration: Every musician knows that moment of confusion, that painful silence as onlookers shuffle awkward as you frantically turn the page of the sheet music in front of you. While large solo performances may have people in charge of turning pages, for larger scale ensemble works this obviously proves impractical. At this hackathon, inspired by the discussion around technology and music at the keynote speech, we wanted to develop a tool that could aid musicians. 
+What it does: Noteation is a powerful sheet music reader and annotator. All the musician needs to do is to upload a pdf of the piece they plan to play. Noteation then displays the first page of the music and waits for eye commands to turn to the next page, providing a simple, efficient and most importantly stress-free experience for the musician as they practice and perform. Noteation also enables users to annotate on the sheet music, just as they would on printed sheet music and there are touch controls that allow the user to select, draw, scroll and flip as they please.
+How we built it: Noteation is a web app built using React and Typescript. Interfacing with the MindLink hardware was done on Python using AdHawk's SDK with Flask and CockroachDB to link the frontend with the backend. 
+
+
+Inspiration: As avid readers, we wanted a tool to track our reading metrics. As a child, one of us struggled with concentrating and focusing while reading. Specifically, there was a strong tendency to zone out. Our app provides the ability for a user to track their reading metrics and also quantify their progress in improving their reading skills.
+What it does: By incorporating Ad Hawk’s eye-tracking hardware into our build, we’ve developed a reading performance tracker system that tracks and analyzes reading patterns and behaviours, presenting dynamic second-by-second updates delivered to your phone through our app.
+These metrics are calculated through our linear algebraic models, then provided to our users in an elegant UI interface on their phones. We provide an opportunity to identify any areas of potential improvement in a user’s reading capabilities.
+How we built it: We used the Ad Hawk hardware and backend to record the eye movements. We used their Python SDK to collect and use the data in our mathematical models. From there, we outputted the data into our Flutter frontend which displays the metrics and data for the user to see.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: None
+What it does: Paste in a text and it will identify the key scenes before turning it into a narrated movie. Favourite book, historical battle, or rant about work. Anything and everything, if you can read it, Lucid.ai can dream it.
+How we built it: Once you hit generate on the home UI, our frontend sends your text and video preferences to the backend, which uses our custom algorithm to cut up the text into key scenes. The backend then uses multithreading to make three simultaneous API calls. First, a call to GPT-3 to condense the chunks into image prompts to be fed into a Stable Diffusion/Deforum AI image generation model. Second, a sentiment keyword analysis using GPT-3, which is then fed to the Youtube API for a fitting background song. Finally, a call to TortoiseTTS generates a convincing narration of your text. Collected back at the front-end, you end up with a movie, all from a simple text.
+
+
+Inspiration: Globally, one in ten people do not know how to interpret their feelings. There's a huge global shift towards sadness and depression. At the same time, AI models like Dall-E and Stable Diffusion are creating beautiful works of art, completely automatically. Our team saw the opportunity to leverage AI image models and the emerging industry of Brain Computer Interfaces (BCIs) to create works of art from brainwaves: enabling people to learn more about themselves and 
+What it does: A user puts on a Brain Computer Interface (BCI) and logs in to the app. As they work in front of front of their computer or go throughout their day, the user's brainwaves are measured. These differing brainwaves are interpreted as indicative of different moods, for which key words are then fed into the Stable Diffusion model. The model produces several pieces, which are sent back to the user through the web platform.
+How we built it: We created this project using Python for the backend, and Flask, HTML, and CSS for the frontend. We made use of a BCI library available to us to process and interpret brainwaves, as well as Google OAuth for sign-ins. We made use of an OpenBCI Ganglion interface provided by one of our group members to measure brainwaves.
+
+
+Inspiration: We both love karaoke, but there are lots of obstacles:
+What it does: Vioke is a karaoke web-app that supports pitch-changing, on/off vocal switching, and real-time playback, simulating the real karaoke experience. Unlike traditional karaoke machines, Vioke is accesible anytime, anywhere, from your own devices.
+How we built it: Frontend
+
+
+Inspiration: The inspiration for DigiSpotter came from within our team members, who recently started going to the gym in the past year. We agreed that starting out in the gym is hard without having a personal coach or gym partner that is willing to train you. DigiSpotter aims to solve this issue by being your electronic gym partner that can keep track of your workout and check on your form in real time to ensure you are training safely and optimally.
+What it does: DigiSpotter uses your phone's camera to create a skeletal model of yourself as you are performing an exercise and will compare it across various parameters to the optimal form. If you are doing something wrong DigiSpotter will let you know after each set. It can detect errors such as suboptimal range of motion, incorrect extension, and incorrect positioning of body parts. It also counts for you as you are working out, and will automatically start a rest timer after each set. All you have to do is leave your phone in front of you as if you are taking a video of yourself working out. The results of your workout are saved to your account in the app's database to track improvements in mobility and general gym progress.
+How we built it: We created this app using Swift for the backend and SwiftUI for the frontend. We are using ARKit for iPhone to help us create our position tracking model for various positions in the body as running natively drastically increases the performance of the app and the accuracy of the tracking. Using our position tracking model, we can calculate the relative angles of body parts and determine their deviation from an optimal angle. 
+
+
+Inspiration: Star Wars inspired us.
+What it does: The BB-8 droid navigates its environment based on its user's gaze. The user simply has to change their gaze and the BB-8 will follow their eye-gaze. 
+How we built it: We built it with an RC car kit placed into a styrofoam sphere. The RC car was created with an Arduino and Raspberry Pi. The Arduino controlled the motor controllers, while the Raspberry Pi acted as a Bluetooth module and sent commands to the Arduino. A separate laptop was used with eye-tracking glasses from AdHawk to send data to the Raspberry Pi.
+
+
+Inspiration: One of the biggest roadblocks during disaster relief is reestablishing the first line of communication between community members and emergency response personnel. Whether it is the aftermath of a hurricane devastating a community or searching for individuals in the backcountry, communication is the key to speeding up these relief efforts and ensuring a successful rescue of those at risk. 
+What it does: Lifeline consists of two main portions. First is a homebrewed mesh network made up of IoT and LoRaWAN nodes built to extend communication between individuals in remote areas. The second is a control center dashboard to allow emergency personnel to view an abundance of key metrics of those at risk such as heart rate, blood oxygen levels, temperature, humidity, compass directions, acceleration, etc. 
+How we built it: One of the biggest challenges we ran into in this project was integrating so many different technologies together. Whether it was establishing communication between the individual modules, getting data into the right formats, working with new hardware protocols, or debugging the firmware, Lifeline provided our team with an abundance of challenges that we were proud to tackle.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Britafull is inspired by the ubiquitous student experience of living with people who may drive us crazy. Some roommates never wash their dishes, some don't take out the trash, but most insidious and aggravating of all... not refilling the Brita!! It's the little things that motivate you to finally get your own place. According to our highly scientific research, 80% of students face the SAME problem!
+What it does: Britafull detects when the Brita's water levels get below a certain point using weight. The next person to grab the Brita and empties it to that point has seconds before the speaker kindly reminds them to be a good roommate and fill up that Brita. If that's not incentive enough, waiting even longer triggers a text message reminder. That's right, the whole group chat knows now. 
+How we built it: We used force sensing resistors to detect changes in force accounting for the presence or absence of the Brita. This information (analog) is passed to an Arduino which converts to a digital signal that is sent to our Raspberry Pi. We programmed primarily in Python and implemented functions to check when the Brita is empty based on the input data; if it is, we then trigger an alarm which prompts the user to refill. Lastly, if the Brita remains unfilled,  we use Twilio to send a message to the entire roommate group chat that someone needs to get on their Brita game!
+
+
+Inspiration: We take our inspiration from our everyday lives. As avid travellers, we often run into places with foreign languages and need help with translations. As avid learners, we're always eager to add more words to our bank of knowledge. As children of immigrant parents, we know how difficult it is to grasp a new language and how comforting it is to hear the voice in your native tongue. LingoVision was born with these inspirations and these inspirations were born from our experiences. 
+What it does: LingoVision uses AdHawk MindLink's eye-tracking glasses to capture foreign words or sentences as pictures when given a signal (double blink). Those sentences are played back in an audio translation (either using an earpiece, or out loud with a speaker) in your preferred language of choice. Additionally, LingoVision stores all of the old photos and translations for future review and study.
+How we built it: We used the AdHawk MindLink eye-tracking classes to map the user's point of view, and detect where exactly in that space they're focusing on. From there, we used Google's Cloud Vision API to perform OCR and construct bounding boxes around text. We developed a custom algorithm to infer what text the user is most likely looking at, based on the vector projected from the glasses, and the available bounding boxes from CV analysis.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: As programmers, we collectively realized how much we disliked the process of creating a pitch site/landing page to explain our project - it took away precious time from working on the actual product! We recognized our shared need for a quick landing page solution, which would sum up the basics of our project, idea, and solution for any viewer to understand. 
+What it does: MyLandingPage creates a landing page site for an emerging project within seconds. Based on an elevator pitch of a project, MyLandingPage uses Cohere's large language model to generate informative copy for the website (the headline, product description, benefits/solutions, and a call to action).
+How we built it: We used MongoDB, Express, React, Node, Typescript, Cohere, Google Cloud Platform, CICD, and AppEngine in order to create our final product. 
+
+
+Inspiration: As more and more people embrace the movement toward a greener future, there still remain many concerns surrounding the viability of electric vehicles. In order for complete adoption of these greener technologies, there must be incentives toward change and passionate communities.
+What it does: EVm connects a network of electric vehicle owners and enables owners to rent their charging stations when they aren't needed. Facilitated by fast and trustless micropayments through the Ethereum blockchain, users can quickly identify nearby charging stations when batteries are running low.
+How we built it: Using Solidity and the Hardhat framework, smart contracts were deployed to both a localhost environment and the Goerli testnet. A React front-end was created to interact with the smart contract in a simple and user-friendly way and enabled a connection to a metamask wallet. 
+A Raspberry Pi interface was created to demonstrate a proof of concept for the interaction between the user, electric vehicle, and charging station. While the actual station would be commercially manufactured, this setup provides a clear understanding of the approach. The Raspberry Pi hosted a Flask server to wirelessly communicate data to the web-app. An LCD display conveys the useful metrics so the user can rest assured that their interaction is progressing smoothly.
+
+
+Inspiration: Many people feel unconfident, shy, and/or awkward doing interview speaking. It can be challenging for them to know how to improve and what aspects are key to better performance. With Talkology, they will be able to practice in a rather private setting while receiving relatively objective speaking feedback based on numerical analysis instead of individual opinions. We hope this helps more students and general job seekers become more confident and comfortable, crack their behavioral interviews, and land that dream offer! 
+What it does: We went through many conversations to reach this idea and as a result, only started hacking around 8AM on Saturday. On top of this time constraint layer, we also lacked experience in frontend and full stack development. Many of us had to spend a lot of our time debugging with package setup, server errors, and for some of us even M1-chip specific problems. 
+How we built it: We went through many conversations to reach this idea and as a result, only started hacking around 8AM on Saturday. On top of this time constraint layer, we also lacked experience in frontend and full stack development. Many of us had to spend a lot of our time debugging with package setup, server errors, and for some of us even M1-chip specific problems. 
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: As a team, we've been increasingly concerned about the data privacy of users on the internet in 2022. There’s no doubt that the era of vast media consumption has resulted in a monopoly of large tech firms who hold a strong grasp over each and every single user input. When every action you make results in your data being taken and monetized to personalize ads, it’s clear to see the lack of security and protection this can create for unsuspecting everyday users. 
+What it does: As the name suggests—Sonr rADar, integrated into the Sonr blockchain ecosystem, is a mobile application which aims to decentralize the advertising industry and offer a robust system for users to feel more empowered about their digital footprint. In addition to the security advantages and more meaningful advertisements, users can also monetarily benefit from their interactions with advertisers. We incentivize users by rewarding them with cryptocurrency tokens (such as SNR) for their time spent on ads, creating a win/win situation. Not only that, but it can send advertisers anonymous info and analytics about how successful their ads are, helping them to improve further.
+How we built it: We built this application using the Flutter SDK (more specifically, motor_flutter), programming languages such as Dart & C++, and a suite of tools associated with Sonr; including the Speedway CLI! We also utilized a testing dataset of 500 user profiles (names, emails, phone numbers, locations) for the schema architecture.
+
+
+Inspiration: Some members of our team have solo travelled cities like Toronto, Montreal, Paris, Munich, Vienna... Even after fully preparing for unsafe situations, they have still encountered many moments of uncertainty leading to anxiety in their travels. Other members walk home on a daily basis and like many of our peers, have a certain degree of anxiety for their own safety. Whether you're a traveller, commuter, student, or city-person, navigating has become increasingly filled with anxiety due to the world becoming increasingly unsafe. Toronto's crime rate has shown a 19.4% increase, Vancouver's 36.1%, Montreal's 27.1%, and the United States shows similar growth rates (Numbeo). As such, our project is inspired by the increasing demand for ensuring individual safety in cities.
+What it does: None
+How we built it: None
+
+
+Inspiration: Getting engagement is hard. People only read about 20% of the text on the average page.
+What it does: None
+How we built it: None
+
+
+Inspiration: With the world producing more waste then ever recorded, sustainability has become a very important topic of discussion. Whether that be social, environmental, or economic, sustainability has become a key factor in how we design products and how we plan for the future. Especially during the pandemic, we turned to becoming more efficient and resourceful with what we had at home. Thats where home gardens come in. Many started home gardens as a hobby or a cool way to grow your own food from the comfort of your own home. However, with the pandemic slowly coming to a close, many may no longer have the time to micromanage their plants, and those who are interested in starting this hobby may not have the patience. Enter homegrown, an easy way for people anyone interested in starting their own mini garden to manage their plants and enjoy the pleasures of gardening.
+What it does: homegrown monitors each individual plant, adjusted depending on the type of plant. Equipped with different sensors, homegrown monitors the plants health, whether that's it's exposure to light, moisture, or temperature. When it detects fluctuations in these levels, homegrown sends a text to the owner, alerting them about the plants condition and suggesting changes to alleviate these problems. 
+How we built it: homegrown was build using python, an arduino, and other hardware components. The different sensors connected to the arduino take different measurements and record them. They are then sent as one json file to the python script where they data is then further parsed and sent by text to the user through the twilio api.
+
+
+Inspiration: We thought Adhawk's eye tracking technology was super cool, so we wanted to leverage it in a VR game. However, since Adhawk currently only has a Unity SDK, we thought we would demonstrate a way to build eye-tracking VR games for the web using WebVR.
+What it does: None
+How we built it: We extracted the blinking data from the Adhawk Quest 2 headset using the Adhawk Python SDK and routed it into a Three.js app that renders the rooms in VR.
+
+
+Inspiration: 2022 CanSofCom challenged was super interesting, and we wanted to take a crack at ~ quantum ~ computing.
+What it does: Task #1 is designed to use a Pauli-Sandwich to reduce error on a set of Quantum gates.
+How we built it: We built off of the existing API's from Zapata and Xanadu, using Python3 to bring together different resources and tackle the challenges.
+
+
+Inspiration: Our hack was inspired by CANSOFCOM's "Help Build a Better Quantum Computer Using Orqestra-quantum library". Our team was interested in exploring quantum computing so it was a natural step to choose this challenge.
+What it does: We implemented a Zapata QuantumBackend called PauliSandwichBackend to perform Pauli sandwiching on a given gate in a circuit. This decreases noise in near-term quantum computers and returns a new circuit with this decreased noise. It will then run this new circuit with a given backend.
+How we built it: Using python we built upon the Zapata QuantumBackend  API. Using advanced math and quantum theory to build an algorithms dedicated to lessening the noise and removing error from quantum computing. We implanted a new error migration technique with Pauli Sandwiching
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: As avid users of Twitter, we have long been questionable of the content we consume and its originality and validity.
+What it does: Natty or Not generates an AI twitter thread based on a legit twitter thread. The user is then left to guess which one is the real twitter thread and which is AI.
+How we built it: We used cohere as the NLP generation engine. React for front end, firebase for server, and node for server.
+
+
+Inspiration: As avid users of Twitter, we have long been questionable of the content we consume and its originality and validity.
+What it does: Natty or Not generates an AI twitter thread based on a legit twitter thread. The user is then left to guess which one is the real twitter thread and which is AI. 
+How we built it: We used cohere as the NLP generation engine. React for front end, firebase for server, and node for server.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: A member of our team used to be heavily involved in the Wordle speedrunning community. He explained to us that most Wordle solvers are heavily inefficient, and that there doesn't exist a Nerdle solver at all, even though Nerdle also has its own category of speedrunning. From there, we took it upon ourselves to create the first Nerdle solver ever.
+What it does: The program takes two inputs from the user: the guess and the result (equivalent to the green, grey, and yellow tiles of Wordle). This information is then used to eliminate possibilities, and the program responds with the next possible guess. Like most Wordle solvers, brute force is used to figure out the next guess, though some optimizations were made in our program.
+How we built it: The program was first written in Java, and the logic was then used to write the application made in Rust as well as the Discord bot made in Javascript.
+
+
+Inspiration: Biking everyday and reduce carbon emissions by 85%. However, as students, we face many hurdles with using sustainable transportation. There are several roadblocks associated with biking, especially the cost of purchasing and maintaining a bike.  
+What it does: ReCycle is an app which connects interested bike owners to riders who want to rent a bike. Bike owners can list their bike for rent for a desired time limit and hourly rate whereas riders can view the listings near them to find the bike that best suits their needs.
+Our app is a win-win for both owners and riders, allowing owners to generate over $750 a month and providing riders with access to more convenient, readily accessible transportation.  
+How we built it: For the front-end component of the website, we created our web-app pages in React and used HTML5 with CSS3 to style the site. We used the Google Maps API to generate a map with markers, directions, and other functionality. 
+ We built the backend using the Flask framework. 
+The backend was built using the Flask framework. We used a cockroachdb database to store and access user-specific and bike-specific information. 
+The product also comes with a hardware component to alert cyclers when they need to return a bike. It was built using Arduino Uno and Active Buzzer.
+
+
+Inspiration: Inspired by the laborious...glorious…notorious…effort…that hackers end up expending throughout their time at Hack the North. By which we mean: staying up really late, losing all cognizant ability, and living to regret it. Which is to say: what we did while building this.
+What it does: Zone uses the data stream output from the Mindlink along with the events it tracks (blink actions/durations, pupil dilation, saccades, etc.) to build a baseline of a worker’s “expected” behaviours. Workers on a shift will be continuously monitored via the Mindlink and the data will be periodically summarized for analysis, in which the Zone software will monitor research-determined attributes to determine whether or not the worker’s level of fatigue permits them to continue working. If Zone finds that the user is too sleepy to safely continue working, it notifies their supervisor via text message that a swap-out is necessary.
+How we built it: First, we modified a pre-existing program written by the Adhawk developer team with basic features that grants us access to a constant stream of relevant data. 
+
+
+Inspiration: A backup project
+What it does: 
+Hack the North 2022
+
+How we built it: 
+Hack the North 2022
+
+
+
+Inspiration: Granular health data is available across a network of apps, but there is no centralized system to generate a quantified, holistic image of your physical health. So, although users are being proactive in their efforts to quantify themself and monitor their health, the sheer amount of data and software they interact with doesn’t provide a quality user experience.
+What it does: So for the user workflow. First part is you log in users, see a dashboard, and this dashboard has all of the most important health metrics for that user. At that point in time. And saying that point in time is crucial because what it means is everything is up to in real time, there's no lag. When they wake up, they'll be able to see what the sleep metrics were from the night before, and that will update as their, their day continues. On the left side, you'll see a holistic score. And this holistic score is how your health is doing based on five categories that we've created blood pollution/air quality, sleep, exercise, and diet. And we're pulling data from five different sources for those five categories. But that wheel is that scoring artificial intelligence looks at these different models and then takes some average to give you you that number. 
+How we built it: What the Health uses Next.js on the backend, a Flask API to deploy the machine learning models, HTML/Tailwind CSS/React for the frontend, and CockroachDB for frontend-backend integration and server connection. 
+
+
+Inspiration: Our inspiration originates from the difficulty and inconvenience in using majority of the currently available sleep cycle applications as they require users to manually log in their sleep time and they are non-inclusive to all types of sleeping habits. 
+What it does: SleepSense allows an easy and friendly user experience with sleep tracking integrated with Apple Watch, iOS, and Philips Hue light bulb. The application automatically turns off the Philip Hue smart light as the Apple Watch detects the user has fallen asleep, and it tracks the closest sleep schedule to the user's set alarm so that the light bulb will gradually brighten as the user approaches to their alarm clock and naturally wakes them up while making sure the users are waken up in their light sleep cycle. The light bulb will also turn on with a very dim light if the user wakes up in the middle of the night, and update the sleep schedule at the same time.
+How we built it: The hardware is a Philips Hue smart IoT lightbulb connected to a Hue Hub, which is in turn connected via ethernet to an EdgeRouter which ties into the apartment WiFi. It was extremely difficult to set up the networking in such adverse conditions but we managed to make it work with an unwise amount of adapters.
+
+
+Inspiration: Public speaking has always been a skill that we've tried to improve throughout the years. We thought it would be a great idea to create an application to help people practice for their big interview, presentation, or pitch.
+What it does: Parlé takes in an audio recording of the user during their practice runs and outputs a scoring system based on the number of filler words used throughout the presentation. Parlé then suggests possible adjustments and fixes of the transcript to improve the dialogue.
+How we built it: We used React to build the frontend, Google Cloud Speech-to-text API, and Co:here's natural language processing API to receive the adjusted and improve the dialogue.
+
+
+Inspiration: Evolving trends. Cheap clothing. Fast fashion. 
+What it does: Our application allows users to upload any piece of clothing they do not need, which others can claim via an 'explore' page. Think of it like a virtual thrifting system—you post, and they take. 
+We also have a 'maps' page, where locations of nearby donation bins are pinned. With multiple methods that are integrated into our application, users can choose their most convenient method to help our Earth.
+How we built it: Our application is created with React Native on the frontend, Node.js and Express.js for the backend, and MySQL for the database. 
+
+
+Inspiration: 3 of our team members cannot operate an automobile. 
+What it does: We delivers a smart driving assistant system that picks up traits often ignored by humans to improve driving quality and strictly judges the trainee's driving based on the testing criteria. The system has two integral parts: the image recognition feed based on a front-facing camera used to recognize road signs and a macro-monitor system that uses HyperTrack to track the car’s movements and parameters. The image recognition system ensures that the trainee obey all street rules and signs; in the case that they don’t – for example, if they don’t wait enough time at a stop sign or run a yellow light, the system will tally these feedback to the trainee and after a session of practicing. The macro-monitor system, on the other hand, uses HyperTrack’s system to track the position, pace, and parameters of the car, such as speed and acceleration, to detect bad driving habits like speeding or jerky driving. The system also gives audio cues to the trainee to better support them with information as they conduct in different circumstances.
+How we built it: The frontend is a web app built with React Native, which calls the Google Maps API and HyperTrack API to handle issues related to speed and slowing down or turning suddenly. The front-facing camera will face the road ahead and will capture images that will be sent to a machine learning model, which detects traffic signs and traffic lights. Using that information, the front-end will handle the logic for all rules related to traffic signs and traffic lights.
+
+
+Inspiration: Last week, my brother sprained his foot and we had to make a visit to the ER. Upon visit, we were told that the wait time was for 9.5 hours. Although we didn’t want to wait, we had no other choice. Turns out I was not the only one who faced this issue, it has been flagged all over Canada. In fact, just in the past month, several articles were written on this exact issue. Taking a look at this specific article from CTV News (https://kitchener.ctvnews.ca/patients-admitted-to-hospital-from-er-waiting-average-of-over-20-hours-at-some-waterloo-region-hospitals-1.6070298), it reports that this issue is prevalent right here in Waterloo, Ontario, with wait times reported being over 20+ hours. Having this as a communal experience, we can say with confidence that this is a major problem. This leads to increased COVID exposure, crowded and uncomfortable wait areas, and people may choose to not even go to the ER due to this, which only deteriorates their health condition. 
+What it does: Due to this issue that we have all personally experienced, we were inspired to create FastER. FastER is an online web application that streamlines this process through a virtual cue for ER wait times. This way, patients with non-life threatening injuries can “wait” in the ER from the safety and comfort of their own homes. The application is only to be used for non-life threatening injuries, such as fractures, dislocations, rashes, etc.
+How we built it: We built this application together using HTML, CSS (bootstrap), javascript, and figma. As we do not have access to Health Canada's database, we created fake data to test this with as well. 
+
+
+Inspiration: Imagine this: you are at a grocery store, doing your weekly groceries when you come across another donation poster. This week, it is for hungry children. You reflect on growing up in a lower income household, where putting food on the table was more of a luxury than a necessity. After years of hard work, you finally break out of poverty, and you no longer have to worry about affording bare necessities. When the cashier finishes scanning all your items, she asks you if you would like to donate to charity. Remembering the days you went to sleep hungry, you donate $25 and leave the store hopeful...
+What it does: Charitize is an easy, three way platform that allows charities to maintain their integrity and relationship with stakeholders, helps donors ensure their money is going towards the right cause, and is an easy navigation site for driven individuals to browse volunteering opportunities. As mentioned, there are three types of users: charity organizations, donors and volunteers. 
+How we built it: After deciding on our idea, we used Figma for the prototyping. Then we created the frontend using HTML, CSS, JavaScript, and React. To connect it to the backend, we used Firebase.
+
+
+Inspiration: During Hack the North 2022, we have met a lot of peeps who are visiting Toronto and asked us: "what are some places/attractions that we should visit in Toronto?" We blanked out and did not know what to suggest despite living there for many years. And this is what gave birth to our project, Midgard.
+What it does: Midgard allows users to SAVE and SHARE their favourite places around the city. Those places include local and international cuisine, cafes, lounges, etc. The application keeps track of the address of the place and the comments on what you recommend having. Beyond that, the application uses the user's favourite places to suggest them new recommendations from time to time.
+How we built it: The application was built using React for the front end and Flask for the back end. Because we use Flask for our server side, we decided the use CockroachDB for database management. Finally, we used Figma for UI and design prototyping.
+
+
+Inspiration: A resume is something that we will all have to make, some time or another. It plays a major role in determining future opportunities. A weak resume could lead to an automatic no, but a great one will lead to success. Many companies use ATS, or applicant tracking system. It's used to scan resumes and see whether they are worthy of consideration/interviews. So, our service uses AI trained on great resumes to help you get approved by both the ATS and your employers.
+What it does: Resumate guides you through the tough task of creating a resume. You start off by picking one of four modern resume templates. Then you enter in your information such as your name, location, school, relevant work experience or any projects that you are proud of. This information then gets automatically displayed on the template you chose. As you enter in the bullet points for your experience, Resumate will give you feedback and tell you how well your bullet points are. Lacking bullet points will be boxed in red and there will be helpful suggestions to improve your lacking bullet points. There will be a score displayed for how well your resume is out of 100. Finally, you will be able to download the resume you created as a PDF.
+How we built it: We built it using Vue for the frontend and we used Cohere's API to generate feedback for the bullet points and an overall score for the resume.
+
+
+Inspiration: As students who face productivity roadblocks on a daily basis, we knew we had to find a solution. An app has been done before, however from our experience, no productivity app alone has lasted longer than a month. Reminders and notifications from an app can be missed due to the phone being on silent, out of charge, or just not in your close vicinity. We wanted to find a solution that will be right where you work all the time. Our solution is Clocktivity, a clock that displays your reminders
+What it does: Clocktivity is made up of both a hardware component and an app, these two are then connected through bluetooth. The hardware component is in the shape of a clock, the clock's numerical digits were then replaced with LED's. We also got rid of the arms of a clock and instead put a display to show the reminder you have. The app component will have a tasks' button where you will be given a chance to name what you need to do, when you need it done, and how much earlier you would like to get the reminder. Depending on the hour you set your reminder on, the corresponding LED will turn on and flash on and off. This will grab the user's attention and have them check to see what the reminder is.
+How we built it: We build the hardware using an Arduino Uno, an LSD display, a bluetooth module, a potentiometer, and a 220 ohm transistor. We connected all the components on a breadboard using wires. For the software component, we coded the Arduino on the Arduino program to have it display what the app sends to the bluetooth module. We coded the app component using MIT App Inventor's block coding software.
+
+
+Inspiration: Hospitals are busy spaces; stressful places. When healthcare systems get busy, it becomes difficult for practitioners and professionals (nurses, doctors etc) to spend meaningful time with patients and keep tabs on how patients are doing — how are they feeling? Are there new symptoms? Have existing symptoms gotten worse?
+What it does: Consano (latin for "to heal") is a tool that makes it easy for patients to talk about how they feel. A simple, friendly web interface allows patients to start talking with one click. Passages are transcribed into written text before running through an NLP model powered by cohere.ai, which scores the patient's status with sentiment analysis while also extracting key symptom words and terms, like "fever," "headache," "stomach pain" and more.
+How we built it: We used a React frontend alongside Node.js, Express and the co:here NLP engine API. Our database of choice was CockroachDB!
+
+
+Inspiration: Since our first Hack the North, in 2022++, we were fascinated by natural language processing (NLP). We missed the way we could categorize text, determine context, and generate new content. This year, we came in with full force and with the help of the co:here NLP API, we were able to make something we think is pretty cool :)
+What it does: Given a name, type, genre and keywords, this ad generator leverages the co:here and stability AI APIs to generate a matching slogan and image - coming together in a Spotify ad inspired advertisement.
+Combining a Figma and react frontend and a javascript and python backend, we combine both APIs to create ads, instantly.
+How we built it: For the frontend, we started the conceptualization in Figma and then translated it into vanilla React.js, HTML and CSS in order to achieve the effects that we wanted. For the backend, we created a python script to generate the image by calling the stability AI API using the inputted parameters and saving the image. Another script was written in javascript for the co:here API and integrated into the backend as well. When the user gives prompts and clicks "Create", the information gets passed onto the APIs and the generated text and images are returned and displayed to the user.
+
+
+Inspiration: Writing mathematical equations with a keyboard is time consuming, beyond basic arithmetic there are various symbols that are non-existent on a regular keyboard. While there are keyboard shortcuts to type these, most are difficult to remember and require a number pad which most modern day laptops and keyboards don't have.  Most current equation writing tools do not help with this problem, they are time consuming and tedious, we wanted to fix that. 
+What it does: Our user friendly interface allows users to automatically convert their words into symbols. Take for example the symbol π, with our application users can simply just type "pi" and it will automatically convert into the symbol in real time. Users typing experiences will not be interrupted with this conversion and they can continue writing as if nothing happened. Our application allows this to be done with various other symbols, these include squareroots, exponents, subscripts and more. Through all their shortcuts users can save hours depending on their task by staying on one application and not having to jump between tabs to copy and paste their required symbols.
+How we built it: We first considered how we wanted to store the corresponding mathematical symbols along with strings that users can easily type, and we figured that dictionaries were the best way to go, as they allowed us to store two values in pairs in a list and allows us to easily find which string corresponds to which mathematical symbol. We then needed to figure out how to print out the proper symbols, in which through some research, we discovered that C# supports strings formatted in Unicode. We then needed to solve how to be able to output the proper symbols in the program, which we spent a considerable amount trying to perform this task by detecting when a desired string was inputted then replacing such string with the corresponding mathematical symbol. We found this very difficult and couldn't think of a way to do this, mostly because the event sent by the textbox were received by the textbox first and couldn't be intercepted by the developer to act on the input before it reaches the textbox. However, this issue led us to come up with the solution of creating an output textbox in which the raw input goes into the first textbox and the intercepted and modified output goes out the second textbox. We then set up the dictionary to contain the necessary pieces of string that allows us to find where a mathematical symbol is required, and this is done by writing the program to suspect if a corresponding string to a mathematical symbol is coming, in which a string builds the upcoming corresponding string. If a match is found in the dictionary, then the second textbox outputs the correct mathematical symbol. Lastly, as we started to fill our dictionary with more and more symbols, we began to work on the visual appeal of the program, changing the shading and updating to the name of our program.
+
+
+Inspiration: Our main focus with Altima is to provide a convenient but accurate platform for consumers and businesses to introduce alternative energy sources in their homes and offices. For many, the switch to alternative energy comes with large uncertainties surrounding performance; people often blindly invest in solar energy without realizing how inefficient it is for their region. 
+What it does: Using environmental data spanning over a year for any selected region, Altima can determine the efficiency rating of both solar and wind generators and combine it with average installation costs to provide its users with the ultimate alternative energy source. Users are also able to create accounts to save previously visited locations in a log, making it easy to choose the most cost-efficient region. 
+How we built it: Our project was constructed using a combination of Flask, Next.JS, React, and CockroachDB. With the use of Mapbox, we first implemented an interactive map and location selector. In addition, we accessed an open-source database of global weather data specific to each region. With the raw software and data implemented, the next step was to correctly determine which alternative energy source would be more ideal for a given region; research was done to determine how specific weather conditions like temperature and humidity affected energy production, as well as quantitative figures for both cost per kWh and efficiency ratings. Finally, the user interface was improved by including accounts and saving user data.
+
+
+Inspiration: As NLP becomes an evermore powerful tool, we wished to apply its strengths to an age-old problem of predicting the market.
+What it does: MarketMood is composed of 3 main components. A web-scraping server that automatically gathers the top news articles on a by-stock basis every 10 mins and uses Cohere's NLP API to determine investor sentiment, a backend that stores relevant statistics and predictors, and a user-friendly frontend that displays the data in a visually appealing manner.
+How we built it: We built this project in many different technologies, including BeautifulSoup for web-scraping, the Cohere API for NLP, Flask to host the server for consistent web-scraping, PyMongo to store data, and ReactJS + Tailwind for the frontend.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: We hear all the time that people want a dog but they don't want the committment and yet there's still issues with finding a pet sitter! We flipped the 'tinder'-esque mobile app experience around to reflect just how many people are desparate and willing to spend time with a furry friend!
+What it does: Our web app allows users to create an account and see everyone who is currently looking to babysit a cute puppy or is trying to find a pet sitter so that they can go away for vacation! The app also allows users to engage in chat messages so they can find a perfect weekend getaway for their dogs.
+How we built it: Our web app is primariy a react app on the front end and we used a combination of individual programming and extreme programming when we hit walls.
+
+
+Inspiration: We were inspired by apps such as GamePigeon (which allows you to play games together over text messages) and Gather (which allows you to have virtual interactions RPG style). We also drew inspiration from Discord’s voice chat activity feature that allows you to play games together in a call.
+What it does: RoundTable is a virtual meeting platform that allows people to connect in the same way they would at a real-life round table discussion: everyone in a room can manipulate and interact with objects or games on the table as they please. However, we take this a step further by providing an easy-to-use API for any developer to create an activity plugin by submitting a single JavaScript file. 
+How we built it: We built the client using React and MUI, with Markdown being used to render chat messages. The client is mainly responsible for rendering events that happen on the roundtable and reporting the user’s actions to the server through Socket.io. The server is built with Typescript and also uses Socket.io to establish communication with the client. The server is responsible for managing the game states of specific instances of plugins as well as controlling all aspects of the rooms.
+
+
+Inspiration: While volunteering at a crisis hotline, our friend observed high volumes of users left waiting for responders in need of mental health assistance. Often, wait times prevented users from receiving the help and resources required, leaving victims at risk of safety and further emotional distress. Exchanging help through hotlines is difficult for both users and agents, who are subject respectively to hours of neglect or overwhelming information about different scenarios. Seeking mental health should not come at a price -- we were motivated by the status quo of slow hotline service to create a web app that extracts critical information for admin, along with suggestions for their situation. rekindle was made to help people help people. 
+What it does: rekindle is an online mental health hotline service accessible to both users and hotline responders. users are encouraged to talk to trained personnel, first describing their situation to an input system; instantaneously, co:here natural language programming intelligence extracts needed information from the user circumstance and provides a summary. The summary of the alleged case is delivered to an open hotline worker/volunteer, who is informed with crucial facts and resources such as emergency phone numbers or counselling options for the user. 
+How we built it: rekindle was built from scratch using the main library React, which was integrated with co:here -- an NLP toolkit that facilitated machine learning for text summarization. Figma was used as the main design outline before coding was completed in HTML/CSS in React. Firebase was a database for user entries and response output. 
+
+
+Inspiration: Time and time again, calendar apps have shown to not be effective, at least not for more than a week. Essence was founded from the idea that there is a better way to organize your daily necessities. 
+What it does: Essence is a user-friendly manager that helps keep people on top of their eating, drinking, and sleeping schedules. It helps people with chaotic schedules make sure that they're living healthy lifestyles with reminders, achievements, streaks, and more.
+How we built it: We did our coding on GitHub, using HTML, CSS, JavaScript, and React. Our group of 4 was assigned different roles which would allow our workflow to be smoother.
+
+
+Inspiration: We went along with the idea from Team Formation but also had to decide on a puzzle that was simple enough to make progress on in 2 days.
+What it does: Lets users sort a shuffled set of colors. The colors are generated using Android 12's dynamic color APIs.  
+How we built it: It's a native Android so we relied heavily on Android Studio. We used Figma and other tools for mockups and a couple of Android libraries to help with the UI. 
+
+
+Inspiration: Will.i.am's talk about how so many things are connected is what inspired us to create HueTunes.
+What it does: HueTunes takes an audio recording of a song, and it connects music to visual art by transforming the melody into a colour palette.
+How we built it: We used flask - a program we didn't know existed until just yesterday! We went through many planning and brainstorming sessions to end up where we are now.
+
+
+Inspiration: Our teammate, Olivia Yong and her family members have suffered brain injuries. Upon the discussion of the detrimental impacts of delayed diagnosis and treatment for concussions and diseases of the brain, we began researching how we could help those with Alzheimer's disease.
+What it does: RECOLLECT allows you to locate your loved ones that have Alzheimer's disease.
+How we built it: Twilio API used for location tracking
+Firebase used for user database
+User interface made with ReactJS
+
+
+Inspiration: As part of our university tour, we went to a materials recovery facility (MRF). There we were able to fully appreciate the process of recycling and the whole supply chain from a household trashbin to a manufacturing mill. We also talked to a couple of people at the MRF, where we learnt that there are certain hurdles and costs that can be avoided if a proper system is implemented.
+What it does: The fact is, that there are brokers at every step of the way in the supply chain. The municipality has to pay these brokers to take the recyclables. After which the MRFs have to buy the recyclables from them. For the brokers, there is no cost price and are earning money from both parties. What if we can remove these brokers and streamline the whole process? 
+BEATS aims to embed blockchain into the advanced recycling value chain to provide a fully traceable and accurately labelled record of recycled materials, from waste sourcing to use in new production streams. This will provide all the stakeholders in the recycling industry with visibility of the provenance and quality of the materials entering and exiting their facilities. Municipalities can create auctions and the MRFs can compete against themselves to get the best price. Which is gonna be cheaper than paying a broker. MRFs then themselves create auctions of their own to sell their bales to the manufacturing mills. Thus we thought of minting an ERC721 non-fungible token for every record of these bales, which will be transferred from one party to the other, and is gonna be traceable. So that in the end, we can also find out how much of the waste item is actually going into the landfills
+How we built it: The backbone of the project is Ethereum, and for the auctions, we tried to use Axelar so that consumers with any cryptocurrency can do the dealing. For the front-end we used React and Firebase firestore and cloud functions for the backend. Authentication is also kind of a niche idea, in which we are not using any email or phone number for signing in to the user. Instead, we are using only the Metamask wallet. Whereupon signing a message(nonce) the user can be authenticated.
+
+
+Inspiration: For three out of four of us, cryptocurrency, Web3, and NFTs were uncharted territory. With the continuous growth within the space, our team decided we wanted to learn more about the field this weekend.
+What it does: None
+How we built it: None
+
+
+Inspiration: Wildfires around the world have destroyed billions of square feet of forestry and fertile land, causing irreversible environmental and economic damage. While there exists a plethora of government agencies in Canada and around the world that track and manage wildfires for public property, relevant data and mitigation strategies continue to remain inaccessible to the agricultural and lumber sectors. 
+What it does: CNDR uses satellite data from NASA through their EONET (Earth Observatory Natural Event Tracker) API to (1) display the risk level of their land, (2) tailor mitigative measures for landowners to protect their livelihoods and (3) connect clients with wildfire relief initiatives and support systems. With a clean UI/UX, we’re able to display relevant information to the user, hoping to improve ecosystems and safeguard businesses. 
+How we built it: In order to enhance the backend and UX, CNDR uses React, Figma (incl. CSS). We imported 3 APIs into our program. NASA’s EONET API is in charge of determining where wildfires are. The data is displayed using the Google Maps API. Statistics as well as longitude latitude calculations necessary to determine the wildfire risk radii are done mainly on OpenWeatherAPI.
+
+
+Inspiration: As university students, we know that taking notes can be difficult especially during fast-paced lectures. Even worse, the fine details of what happens during a class can easily be forgotten. What if your friend asked you a question while the professor said something important? What do you do? Use SquirrelAI!
+What it does: It is a cross-platform mobile app that allows students to audio-record lectures and other important events. It automatically transcribes the contents of the audio file into text, separating speakers and focusing on the most prominent one. Additionally, we auto-generate a set of flashcards per audio file, identifying and summarizing key ideas to varying degrees of specificity. We also computed the corresponding key ideas that are the most semantically similar from the audio file, and map the flashcards to one another. This way, you can swipe left and right to access different but similar flashcards! 
+How we built it: We have a backend API written in Flask and hosted on Google Cloud Run. Our frontend is built on React Native and Typescript. Our database and storage is hosted serverlessly on Firebase. 
+
+
+Inspiration: Our team was comprised primarily of beginners to hacking, so we sought to take on a project in a new area none of us had worked with before, those being Web3/Ethereum or NLP. Both areas had tremendous sponsor support and help, and we eventually decided on an NLP project using Cohere's API. 
+What it does: ImitAItor pits two opponents against each other as they attempt to imitate an AI. An identical prompt is provided to both players, and they are each tasked with creating a sentence based on this prompt. Simultaneously, the prompt is fed to one of Cohere's Natural Language Processors (NLP), allowing it to create a fitting sentence. These 3 sentences are then shuffled, and each player must guess which of the sentences was written by the AI. If a player correctly guesses the AI's sentence or tricks their opponent, they win. Studying the AI's writing style across multiple games and imitating it effectively to throw off your opponent is key to success!
+How we built it: Our backend utilized Python calling Cohere's NLP API. Front-end was built using Figma and Tkinter GUI framework for Python.
+
+
+Inspiration: For the past week, my parents have been out of town, so I have been eating frozen Costco food and instant noodles for all three meals every day. Although I had raw foods to create meals with, I did not want to enter my ingredients into a website, search through the recipes to find a good meal, find a recipe I actually had all the ingredients for, and most importantly, find a recipe that doesn't take years to create. 
+What it does: My scenario can be solved using Vision Nutrition! Vision Nutrition is a website that uses your camera for you to take an image of all of your ingredients so you don't have to enter all of your ingredients, identifies your ingredients in the image, and lists all recipes by time and rating(the way the recipes are sorted can be changed). Since convenience is one of our core values, we try to find recipes that take the least amount of time to create and use all of your ingredients yet don't have many more ingredients listed in the recipe. Not only this, it includes a fun nutrition fact every day!
+How we built it: Our website is built by using HTML and CSS, and it lists all of the recipes by the sorting method we listed above. The image ingredient identification is done using Tensorflow, where we trained a model to recognize different ingredients through image recognition. The recipes are all scraped from "Allrecipes," and the ingredients recognized are put into their "Include these Ingredients" filter, and then we filter these results by time and rating.
+
+
+Inspiration: We have experienced doing extensive research for daily stock price changes, but also have the tendency to forget about our investments. Our team knows that if we forget to check out Wealthsimple accounts sometimes, there’s a high chance that others do too, so we were inspired to create something that would be beneficial to all investors. Additionally, when doing research about stocks, there is loads of misinformation around the internet, so the goal of InvestorCo is to take that out and give investors reliable sources and stock change reminders. 
+What it does: At InvestCo, our mission is to help investors with diverse platforms and portfolios stay updated about any news that impacts the prices of their investments. A misinformation model working in the background filters out false or biassed information in order to deliver accurate information. In addition to this, we notify the investor about why the price fluctuation that is happening with their investments is happening - in real time. 
+How we built it: We used the Google News API and Cohere API to come up with the basis of our web scraping and summarizing. The Google News API was used to web scrape any news on a certain stock on the internet. Following this, the articles were fed through an AI model, which declared them as positive or negative and then moved on to the summarization step displayed on the frontend. This was then fed into the Cohere Article Summarizer API which summarizes multiple retrieved articles to only include important or necessary information. 
+
+
+Inspiration: With LiDAR and Photogrammetry technology becoming increasingly accessible, we had to ask, why? Why is Apple including LiDAR scanners in their top-end devices? Why are there dozens of 3D reality capture apps? What is the utility of these technologies?
+What it does: As such, we built a one-click solution to 3D print a photogrammetry / LiDAR scan from a mobile device. We built a platform where users could upload, process, and have their 3D capture 3D printed, all in one click. 
+How we built it: Sitting on top of a Linux instance, we built a web server and interface using Flask, Python, HTML, and CSS. Here, users can upload their point clouds to be processed and printed.
+
+
+Inspiration: We got the inspiration by watching each other collapsing to finalize a hackathon idea at 5 a.m. in the morning. We've tried multiple other methods like hackathon idea generators online but didn't get much idea from those randomly arranged tech buzzwords. Then the divine inspiration came as we would like to develop a solution that solves our pain point on the spot.
+What it does: Our product provides users, and hackers in all hackathons, an opportunity to generate a unique, challenging, potentially award-winning idea in filtered areas of interest. We made sure that the concept is highly potential and outstanding in the fierce competition of hackathons by using the NLP algorithm powered by co:here API to analyze all winner projects on the Devpost website. 
+How we built it: We powered up co:here API to read the input we scraped from past hackathon projects on Devpost. We fetch the information we need such as tools and descriptions. Then the output is shown in an interface designed by Figma and implemented by React.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: None
+What it does: The user will initially input the city they intend on traveling to and the number of days they plan on spending there (i.e. Toronto, 5 days).
+How we built it: None
+
+
+Inspiration: The World of High frequency trading and its possibilities as well as the rise in the popularity of wall street bets
+What it does: Our program scraps reddit data using the praw algorithm, based on a certain key word, passing that data to a sentiment analysis algorithm, this algorithm then passes that information into out trading algorithm which uses the number calculated to as a weight as too if to buy and sell a particular stock
+How we built it: We build it initially we jupyter notebook then build it further from there using QuantConnect to create a trading algorithm, which determines if to buy or sell based on both information from QuantConnect past data, as well as a confidence interval calculated by the jupyter notebook
+
+
+Inspiration: Memories are special to us but in often situations we are faced with the dilemma to record the moments that are special vs fully enjoying them. This gave us the inspiration to build memor.i.eye glasses which capture the moments that are special and are worth re-visiting at some point in the future.
+What it does: 
+Hack the North 2022
+
+How we built it: 
+Hack the North 2022
+
+
+
+Inspiration: When brainstorming ideas for Hack the North, we were eager to explore how technology is used with plants. We took an interest in using sensors with plants to help them grow more efficiently. People kill houseplants because of neglecting to water and care for them. 
+What it does: Plant Pals uses a bunch of different sensors to monitor the conditions of the plant. We collect the soil moisture, temperature, light, and humidity values of the plant's environment. The sensors send this information to the Plant Pals web app. The status icons of the plant will change to display the information taken from the sensors. The web app will notify the user whenever the plants, lighting, soil moisture, temperture, or humidity are hostile to the plant's growth. 
+How we built it: We built the hardware part of the project using an Arduino; we connected all the sensors to the microcontroller with the help of breadboards to model our circuitry. For the software part of the project, we used a combination of HTML, CSS and JavaScript to create a web app to display the data aesthetically.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: As university students, we all understand that one of the biggest struggles of living by yourself is cooking food. We wanted to make it easy to find and craft new recipes, while still eating healthy.
+What it does: With MyRecipePal, we make it easy for you to find new recipes to try. By filtering using your preferences, allergies, and cooking time, it's ensured that you will always find the right recipe for you. MyRecipePal allows you to eat healthier, save time, and improve your cooking skills all at the same time.
+How we built it: We used React, JavaScript, ChakraUI, and Bootstrap for the frontend. For the backend. we used  CockroachDB and Express,
+
+
+Inspiration: As first year university students, attending university lectures has been a frightening experience. Much different than how it is in high school, with a class of thousands of students, it’s much too easy to lose focus in lectures. One bad night of sleep can lead to valuable information lost and while one may think that only missing one lecture is alright, wait until they see the content they missed on the midterm. That is why we decided to build an application capable of speech to text recognition and a bunch of other useful features such as text summarization and text translation in order to help students with understanding lectures and avoid those days where one may zone out in class. 
+What it does: Paying attention is hard. Only 6% of the world are native english speakers. heAR uses AR and NLP to help you take notes and understand other people
+How we built it: In order to build our project, we first came up with how we wanted our application to look like and what features we would like to implement. That discussion lead us on deciding that we wanted to add an Augmented Reality feature on our application because we felt like it would be more immersive and fun to see summarized notes that you take in AR. To build the UI/UX and augmented reality of the app, we used Unity and C#. In terms of text summarization and text translation, we used Co:here’s and Google Translate’s API in order to achieve this. Using python, we were able to build algorithms that would take in paragraphs and either translate them, summarize them or even both. We decided to add the translation feature because in University, and also in real life situations, not everyone speaks the same language and having that option to understand what people are saying in your own language is very beneficial. 
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Brainstorming encourages us to utilize collaboration to solve problems and generate innovative solutions. However, it can also take a lot of time and resources to fully utilize brainstorming. In fact, that is the very problem our team faced as we were coming up with our project idea. We had spent many hours brainstorming, filling the whiteboards with ideas, but we still struggled with deciding the right direction to take. But, then it hit us that we could turn this problem into our solution! So, we decided to make a brainstorming app called ThinkBoard. The goal is to provide a platform that makes it easy to use smart technologies to improve and maximize brainstorming, helpings others to see the potential in their ideas and bring them to life!
+What it does: ThinkBoard is an online web application that leverages the visual layout of mind-mapping, organizes your ideas, and leverages Natural Language Processing (NLP) using Cohere's models to provide predictive suggestions to plan your ideas based on your descriptions you type in. Furthermore, our platforms uses this AI technology to views summaries of your ideas, classify them into categories, and provide relevant suggestion's to narrow your ideas, allowing for further researching by clicking on related topics until the most closely relevant ones. This is all displayed in a concise and organized manner to manage your different brainstorms. 
+How we built it: All of our team members contributed their diverse skillsets to rapidly build our product in the following ways:
+
+
+Inspiration: Our team met during the 2022 SHAD summer program at the University of Calgary. During our time at SHAD, we learned that finding a problem to address is just as, if not more, important than creating a solution. When we came to Hack the North, we all knew that we wanted to tackle a big issue that has a serious impact on society. 
+What it does: News Shield is a web-based platform that provides users with analytics about news articles from many different sources, that all have different opinions and leanings. The website presents users with popular topics that are often in the news, and uses the NewsAPI to dynamically find news articles relating to a chosen topic. Multiple APIs and modules are used to scrape and analyze these articles, returning information such as the articles':
+How we built it: The News Shield platform is built with a python back-end and React front-end, using Flask to bridge both elements. The front-end allows the user to navigate pages and select overall news topics. When a topic is selected, key phrases are passed to the back-end, where a main function uses the key phrases, among other conditions, to search a database of news article titles using the NewsAPI.  The newspaper API copies the content from the identified articles, and the OneSimpleApi "Readability, Reading Time and Sentiment for Texts" endpoint is used to conduct text analysis. All of this information is then formatted and passed back to the website using Flask.
+
+
+Inspiration: Humans. Bananas. Predator. Prey. So different, yet so alike; truly natural wonders of the modern world. 
+What it does: Given a picture from your camera or photo library, humanana (read: "human nah nah") tells you whether you look more like a banana or a human and how confident it is. Come by and check out our live demo!
+How we built it: (too many banana pictures) + (too many human pictures) = a dataset of nearly 5000 images, which we used to train our image classification model. 
+
+
+Inspiration: Kabeer and I (Simran!) care deeply about impact, and building cool sh*t. 
+What it does: When there is an object within 50 cm of the cane, the buzzer buzzes, alerting the user of obstacles in the way of their movement. 
+How we built it: We connected the arduino to ultrasonic sensors which measure the distance to an object by measuring the time between the emission and reception. Once the arduino and ultrasonic sensors were connected, we coded it so that if the distance in cm is < 50cm, a buzzer would ring, alerting the person that there is a object nearby.
+
+
+Inspiration: As students, we are constantly needing to attend interviews whether for jobs or internships, present in class, and speak in front of large groups of people. We understand the struggle of feeling anxious and unprepared, and wished to create an application that would assist us in knowing if we are improving and ready to present. 
+What it does: Our application is built around tracking applications such as body language, eye movement, tone of voice, and intent of speech. With the use of analyzers, Speakeasy summarizes and compiles results along with feedback on how to improve for your next presentation. It also grants the ability to learn how your presentations come across to others. You can see how clear and concise your speech is, edit your speech's grammar and spelling on the fly, and even generate a whole new speech if your intended audience changes.
+How we built it: We used LLP models from Cohere to help recognize speech patterns. We used prompt engineering to manufacture summary statements, grammar checks, and changes in tone to deliver different intents. The front end was built using React and Chakra UI, while the back-end was created with Python. The UI was designed using Figma and transferred on to Chakra UI. 
+
+
+Inspiration: We've all had that moment - perhaps we see a poster we really like, but the flow of life prevents us from being able to whip out our phone, take a picture, and crop out the poster itself. Maybe we have a bunch of documents that we want to take a picture of. Or maybe you're in a lecture and your professor decides not to publish the slides, leaving you with the only alternative of using your phone to take pictures of important slides, wasting precious time you could've spent listening for a subpar photo that's probably shaky and off-angle; or, even worse, your professor has a "no-phone" policy that prevents this in the first place. With everything returning to normal, this has become so much more common - and that's where InstaCap comes into play.
+What it does: Our application allows you to seamlessly take pictures of documents, slideshows, and posters with just a willful blink; you can even take panoramic photos for wider views :O ! Images are uploaded and can be accessed via the web application, where you can download or remove images. Images are transcribed with OCR and can be filtered via the text in them.
+How we built it: For the eye-tracking software, we used AdHawk MindLink glasses to see the user's FOV and track when they blinked. We used PyQt as the desktop app renderer, Firebase as our image-saving database, and React for the UI to display these images.
+
+
+Inspiration: I have recently been very interested in language learning. I use a breadth of different tools to assist me in consuming as much genuine content in my target languages as possible. This comes from the philosophy of immersion, which believes that a combination of studying the grammar of a language, as well as consuming content in that language with minimal translation as possible is the most efficient method to acquire a foreign language. This allows one to better connect to their target language, and learn in a way that is fun.
+One of the ways I achieve this is is by listening to Spotify on my daily commutes to university, following along with the lyrics on my phone. When I come across a word I don't recognize, I tediously pause my music, switch tabs, and find the translation. This majorly disrupts my learning flow and takes time to perform.
+I thought: there must be a better way. Now there is!
+What it does: Lyrify is the perfect way to learn a new language through your favorite songs! It displays the lyrics to the song you are listening to on Spotify, as well as the translations of certain words of interest, upon user interaction. It automates the task of translation for the user, and contains this language learning method into one application.
+How we built it: None
+
+
+Inspiration: Hearing loss consistently ranks among the top five causes of years lived with a disability in Canada. Overall 60% of the Canadians aged 19 -79 have a hearing health problem. This can lead to hinderance in participation towards educational and employment opportunities. Currently almost all universities have student volunteers writing notes for hearing impaired students during lectures so that they do not miss out  on the content. This can be a huge barrier to students with disability and can even restrict them for making use of the all the available resources that everyone else has the access to.
+What it does: 'Notes for All' hopes to improve the participation of hearing impaired students in their educational activities and help provide them with an inclusive way of participating in lectures.
+How we built it: None
+
+
+Inspiration: As two of our teammates descended into a moment of discord, we found the importance of a ubiquitous yet significant natural force-human laughter. Our two comrades bore their fangs at each other due to their disagreement on whether Waterloo was a great school or not. They disputed on and on about Waterloo’s courses and faculty, but it took a third party to completely end their debate. Our third member finally intervened with a simple yet true joke; UW is tundra in the winter, do you guys think you can live as polar bears? Suddenly, all three parties broke the tension with their thunderous laughter, and the conflict was resolved. The inspiration for this game came after two students on our team shared a moment of uncontrollable laughter. We discovered laughter’s great healing abilities and wanting to share the great gift of laughter with others, our team decided to create a try not to laugh app. 
+What it does: Our web app presents users with hilarious shorts from Youtube and Reddit, giving them opportunities to laugh and rid themselves of the worries that they have accumulated throughout the day. The goal of the app is to be as funny as possible; inversely, the users’ goal is to avoid laughter as much as possible. Every time the user avoids laughter, they are rewarded a point, and if the users find themselves with as little as a grin on their face they lose their streak. Finally, their score is tallied and they are granted a place on the leaderboard when compared with their friends. Then an AI learns the user’s laughter patterns and tries to predict the type of video they find funny. This way, the users help us understand how to make them laugh. 
+How we built it: We built this project with multiple goals in mind. We wanted to make use of as many sponsored services as sensibly possible, and we wanted to use our collected skills to the best extent. Therefore, we ended up choosing a CERN stack (CockroachDB, Express, React, NodeJS) along with Co:here to stretch our abilities to the point of improvement. Then we used Bootstrap to ensure the app’s scalability. We then used a javascript API that allows us to detect emotions through a webcam. The next steps came naturally and successively: we integrated the API into the main stack, found a method to scrape funny Reddit and Youtube videos, and worked frantically to put all of the puzzle pieces together, eventually coming to the entity known as Laugh-a-lot. 
+
+
+Inspiration: I was learning about the co:here toxicity filter and thought about how cool it would be to be able to browse the web without any unwanted toxic behavior. Even on websites like 4chan where toxic behavior is expected or allowed. 
+What it does: On page load, it replaces the html with a peaceful version of the html page so users can browse calmly.
+How we built it: We built a browser extension on chrome with a backend that uses the co:here api to scan user interaction on popular websites for toxic behavior. 
+
+
+Inspiration: 💡 High school is stressful enough. Course choices are important decisions that high school students make that have the possibility to impact their entire lives. With university admissions getting increasingly more competitive, wise decisions regarding course selection is integral. Often high school students have to go scavenging to find information about courses making the process unnecessarily hard.
+What it does: 📚 Our product allows students to have access to all available courses in one place. Schools can set up the courses they can offer by completing one simple form which, in turn allows students to use our product as a catalogue and “go shopping” for their education. Course Chekr creates a one-stop shop for all your course selection needs. 
+How we built it: 💻 This project was done using HTML and CSS. Figma was utilized for prototyping earlier on in the hackathon. 
+
+
+Inspiration: We all learn about the basic subjects, math, English, science and the arts in school which is instilled in our brain like the alphabet. However, there has been a lack of education and emphasis put on for personal finances during younger years of schooling, if not all. Hence, our web-app, GoodBank, aims to encourage children from a young age to be aware and mindful of their financial decisions, and manage their finances.
+What it does: GooseBank's main objective is to provide financial literacy to students grade 6-12 through simulated banking web-app used for their day-to-day transactions at school.
+How we built it: We created the app using JavaScript, node.js, express.js, React.js, CockroachDB, Firebase, Scaffold-eth API
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Taking medication or supplements is a necessary and vital aspect of life, but it can be tedious to count and sort out each type of medication on a weekly or even daily basis. The idea behind pill-e originally stemmed from the fact that many of our peers needed to make frequent visits to their elderly relatives' places to sort out their medication for the upcoming week. Residents at senior homes and hospitals may also require additional support with taking medication, especially for those who experience Alzheimer's or other types of dementia, decreasing the time that nurses and caretakers have to manage other issues. 
+What it does: Paired with an app interface, pill-e can be set up in just a few button clicks, where the user can indicate which pills should be taken on which days and times. The output of the pills is controlled using customized pill filtering containers powered by continuous servo motors and an LED-photoresistor setup. 
+How we built it: All mechanical components were designed and iterated upon using Solidworks, and produced via rapid prototyping. These were integrated with a Raspberry Pi, an Arduino, a breadboard, photoresistor, LED, display screen, servo motors, and a camera to provide the functionalities of pill-e mentioned above. The app was developed and integrated with the hardware components of pill-e via Python and HTML/CSS, specifically Flask and Bootstrap. We stored the user's requirements for the pill dispenser in the app to use along side the mechanical components.
+
+
+Inspiration: Jetpack Joyride, Flappy Bird
+What it does: A game controlling a butterfly
+How we built it: C++ and the SFML library
+
+
+Inspiration: The inspiration of this project came from one of the sponsors in HTN (Co:here). Their goal is to make AI/ML accessible to devs, which gave me the idea, that I can build a platform, where people who do not even know how to code can build their own Machine Learning models. 
+Coding is a great skill to have, but we need to ensure that it doesn't become a necessity to survive. There are a lot of people who prefer to work with the UI and cannot understand code. As developers, it is our duty to cater to this audience as well. This is my inspiration and goal through this project. 
+What it does: The project works by taking in the necessary details of the Machine Learning model that are required by the function. Then it works in the backend to dynamically generate code and build the model. It is even able to decide whether to convert data in the dataset to vectors or not, based on race conditions, and ensure that the model doesn't fail. It then returns the required metric to the user for them to check it out. 
+How we built it: None
+
+
+Inspiration: One of our team members dreamed about creating this idea for the past 11 years, wanting to even do it as his master's project. Over this weekend we made this dream a reality.
+What it does: Graffiti allows you to draw on any wall using nothing but your phone, mimicking the look and feel of traditional spray paint can, but in an environmentally friendly, and legal way. You can share your art with others and allow people to see your work.
+How we built it: We built this app using RealityKit and SwiftUI on Xcode
+
+
+Inspiration: Fitness plays a crucial role in most of our lives in regard to mental and physical health. Our passion for fitness and leading a healthy lifestyle played a massive role in choosing this topic, especially with regards to how it affects the current generation and how it may affect future generations. In addition, many studies have concluded that our upcoming generation is seemingly becoming lazier by the second. One of us lives with younger siblings and can vouch for the fact that their regard for health and fitness is far below what it should be. However, with that said, it's easy to see that their interest in video games has started to peak. Video games in general may not be seen as beneficial, however, it has the ability to captivate individuals from around the world. We've decided to utilise that strength to benefit users by encouraging them to pay more attention to their physical health. 
+What it does: LevelUp is a software that is able to analyze users as they exercise in order to provide visual feedback to ensure they are able to maintain good form and develop a healthy workout routine. We provide two different game modes, namely Progress and Infinite. Progress provides users with a chance to hit their target while showing them a visual representation of their workout progress. 
+How we built it: The project, which was built in python, mainly utilizes three different frameworks, mediapipe, openCV, and pyGame. The frontend of the software was designed mainly using pyGame. This provides users with an intuitive layout and easy-to-use platform. In regards to the backend, our software's technical features are spotlighted by the use of the combination of OpenCV and Mediapipe. Mediapipe provided a crucial role in our project with its efficiency in analyzing human poses. OpenCV provided the means to convert the mediapipe landmarks into useful pieces of data which were useful in various technical features such as angle detection. 
+
+
+Inspiration: By now, we're all well-accustomed to the kinds of stress, expectations, and environment students and adults alike have to go through each and every day. But what's alarming is that the extent of these burdens never seemed to have been higher. In 2019, a study showed that approximately 1/5 Canadians suffered from some form of mental health issue. This state of mind can be extremely damaging, causing people to get into a "rut" so deep that they forget to take care of themselves or do the small things. 
+What it does: "Snowball" was built to help people out of tough situations. Not by forcing someone to suddenly go out and change the world, but rather by developing small consistent habits. Every 2 weeks, the user has 2 tasks to be completed each day, this can range from something like making your bed to talking to complete an act of kindness towards another. The goal is to have the user “Snowball” their momentum into getting out of their rut; developing consistent skills and learning to value themselves.
+How we built it: Snowball leverages React js for all things frontend of the web application. MongoDB was used to build the backend database; storing user info, streak status, etc.
+
+
+Inspiration: There are a lot of factors that correspond to success during interviews. A candidate may have all the skills but their nervousness or lack of preparedness can easily lose them the job. Interview preparation is extremely important however it is tough to know exactly how to practice. As students who are looking to secure our next exciting coop a trainer would be an excellent tool. That’s why we set out to build Winterview.
+What it does: Winterview is a VR interview training solution where users can practice answering questions for specific interviews. Winterview consists of a mobile app where users can sign in and upload job descriptions which the AI will use to prepare suitable questions. The user will then select a job description to interview for and begin an interview with an AI in virtual reality. Data will be collected on various factors such as eye contact, hand gestures, use of filler words and if key words in the job description were used. Users can then use the app to see scores and analytics on their performance.
+How we built it: None
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Co-founder's ability to never get straight to the point
+What it does: Has 3 different components and using speech recognition and NLP to summarize text. Also gets creative to build song lyrics or even a blog post.
+How we built it: We used various libraries to put the project together. This includes speech recognition libraries and the Cohere API for NLP. The whole thing was written in Python
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: We found existing Todo apps to be lackluster since the human has to perform the bulk of the work. We believe this project will minimize the work the user has to perform as they can leave it to the intelligent AI assistant to do!
+What it does: ToSort is an AI-powered intelligent To Do List App plugin that can be configured with your favourite To do list applications such as Todoist. ToSort will automatically categorize your tasks as you create them so you never have to stop planning. It will also predict the priority of the task for you so you know which tasks you need to get done first, without having the task of deciding.
+How we built it: ToSort was built using Cohere's classification language models and embeddings. We created examples ourselves and passed that into the model to get custom predictions for our classes. We hooked these predictions up to the Todoist API and started labelling tasks based on the prediction confidence scores.
+
+
+Inspiration: Sales representatives often have to rewrite the same emails all the time, our product allows them to speed up this process by filling in the email for them. All they have to do is enter in the product they want to sell and the preferences of the customer of interest.
+What it does: Given prompts, it is able to generate a sales email pitching a specialized product to a customer in seconds depending on the customer's preferences and keywords from their profile. 
+How we built it: Connecting the Cohere API to our app and ensuring combability between all the platforms React supports.
+
+
+Inspiration: This Hack the North, our goal was to make a wearable hat capable of sensing things around the person wearing it. We were heavily inspired by the concept of spidey sense as seen on the big screen. However, we also felt that we should also build something that society could benefit from. 
+What it does: Insight4 is a hat with several ultrasonic sensors that can sense objects in 360 degrees field of view, warning the user when an object gets too close, or when an object is moving towards the user with a dangerous speed. We are currently simulating the alarm system with several sound buzzers and LEDs. 
+How we built it: The project is currently powered by an Arduino leonardo which consists of 4 ultrasonic sensors rotated by a servo. Throughout the event, we designed simulations, drawings, and computed complex mathematical computations for the wearable hat so that it is able to accurately detect any object in 360 degrees field of view. By going through these time-intensive processes, we were able to handle many edge cases in our hat ensuring that the hat followed a stable mechanical and software mechanism. 
+
+
+Inspiration: Everyone has a list of ideas that we forget about or conversations we wish we could remember. Organizing reminders or tasks for far flung reaches of the internet is a pain. With so little time, how can we achieve our small, but important, goals in life?
+What it does: The functionality of our discord bot is twofold. 
+How we built it: Front End: Python, Discord API, Flask.
+
+
+Inspiration: We live in a society where data is extremely important. Technology all around us is constantly collecting it  and it's generally being used to improve all our lives. Data allows us to make objectively better decisions guided by information. One relatively new way to gather data is through eye-tracking. Eye-tracking has many possible applications, including determining what a user is focusing on. Based on our experience with web development, we understand how tedious it is to get data on how your user is using your website. For example, are they focusing on what we want them to? Or are they spending time getting distracted by other content on the page? Up until now there hasn't been a great way to get this info, but now there is. 
+What it does: None
+How we built it: None
+
+
+Inspiration: When an exam is around the corner, there's one thing students like to do: procrastinate. According to Newton's First Law of Motion, an object at rest remains at rest, but Quizzify can give us the boost of inertia needed to get into motion! Wouldn't it be nice fast forwarding in time to have the flash cards already made?
+What it does: Quizzify takes in user's typed notes and converts them to a quiz with multiple choice and free-response questions. With the natural language processing module from Cohere, we are able to generate incorrect options that sounds right. Moreover, Quizzify can grade the answer based on semantic similarity using spaCy API. It is able to generate the questions & answers from the notes, and stores it on CockroachDB for low-latency serverless access.
+How we built it: Frontend: React.js
+
+
+Inspiration: Whether it be recreational reading, academic research, or even reading to learn a new language - there's all been times where we’ve wished we could just read faster, understand better, and retain information for longer. Introducing: the Rosetta Glass.
+What it does: The Rosetta Glass is an ultra-intelligent reading companion that will identify when the user is having difficulty with a particular passage, word, or sentence using Ad Hawk's eye-tracking glasses and suggest alternative explanations with Cohere's NLP capabilities. The Rosetta Glass also doubles as a translation aide when reading foreign languages, eliminating the clunkiness of having to go back and forth between Google Translate and your favourite foreign novel. At the end of the day, both the text simplification and translation modes record the user's problematic texts into our CockroachDB database for easy reference through our handy iOS app. 
+How we built it: Our main, desktop application to track the user’s eye movements, detect when the user is struggling with a passage, and display text simplifications / translations is built using Python with the Qt framework. The app leverages Google Cloud Vision AI to identify coordinates for each word on the screen, so when we detect confusion from the user (for example, if their eyes are fixated on an unfamiliar word), we cross-reference the location of the user’s gaze with the coordinates of each word to determine which word(s) to simplify / translate. 
+
+
+Inspiration: Scroll. Like. Scroll. Like. Scroll. Like. Scroll... 
+What it does: Upon navigating to our website, the user types an opinion (eg. "The Earth is flat") into the search bar. We take the user's expressed opinion and flip it on its head by adding some simple contrary keywords, then track down a corresponding article with the newly negated query. Finally, we return a list of the articles we curated for you, ready for you to click through and mindfully, critically peruse at your leisure.
+How we built it: Our current model for processing and "reversing" a given search query is rather inelegant, given that it only really returns the desired results when the query is phrased in a specific way. To improve upon this, we would love to grow our knowledge of the Co:here API system's processes for identifying key words and classifying text sentiment, so that we can create a system that would work for just about any contentious/two-sided statement worth its salt. There are also a whole host of other ways we'd like to use Co:here; for example, we considered using sentiment analysis to return an objective numerical value to the user expressing how many credible articles we found arguing for either side of the topic (as well as links to read up on both sides). A similar idea was considered for identifying an article's credibility based on its tone and/or the presence, or lack thereof, of buzzwords. Finally, if we should add one or both of the latter two sentiment analysis features, we'd like to explore further methods of visually representing the articles to make that data clear—for instance, representing each article as a node on a map and varying the colour from red to green based on how much in line the article is with your opinions, or varying the size based on how credible we judge the article to be.
+
+
+Inspiration: PostETH is inspired by post-it boards. What if you could post sticky notes on a global, anonymous, decentralized network?
+What it does: PostETH allows the user to make text posts on the Ethereum blockchain.
+How we built it: I built the website with React, Hardhat, and Material UI.
+
+
+Inspiration: Having met each other for the first time in this hackathon, our team members wasted no time getting acquainted with one another. We were sharing social medias and browsing through each others Instagram pages when we noticed just how hype our comments were! We were one-upping each other on who has the best comment section vs the lamest one. How would we ever decide?
+What it does: InstaFans is a light-hearted website that takes comments from your instagram account and shows you which followers are your:
+How we built it: While we were working with one of the API for scraping, the API gave us a a very large JSON file with tons of data, most of it being useless to us. To only grab the specific data fields we needed, we worked on trying to filter the JSON file, loop through it and only grab the necessary parts, etc. With persistence and patience, we thankfully figured out a way to get the required fields.
+
+
+Inspiration: We were inspired from Web2 Social Media Platforms and wanted to invent something new which includes Web3
+What it does: Users can mint NFT and Have a chat with other users on System
+How we built it: We learnt stuff about Web3 and how it works and how decentralized platforms work
+
+
+Inspiration: With all the hype surrounding generative art after the release of Stable Diffusion, our team wanted to see if we could do something beyond the already spectacular limits of Stable Diffusion. After playing around with the model for a while, we enjoyed the creativity and expressiveness the model provided, but we wanted to find a more practical application, so we thought of photo editing.  Specifically we thought it would be cool if we could use stable diffusion to change specific parts of an image while keeping the rest the same. This could let us do stuff like changing someones hair color or even their entire outfit. 
+What it does: Blend.ai is using machine learning to make photo editing easier than ever before. You just pick a region, pick a prompt and the machine learning model does the rest. Prompts can be anything from an empty string(which attempts to remove the selected region and preserve the background), to whole sentences describing what you want to edit into your image. The unique thing about our UI is that it is very simple since only has to focus on selecting area of the input image. The rest of the editing complexity is taken care of in the prompt. Users don't have to worry about their photo-editing skills to create the image they want.
+How we built it: For the frontend, we first built a basic front end skeleton using typescript React and Vite. We then incorporated components from Mantine.dev to construct the sections of our user interface from file upload, text input, and tool selection. Using an embedded HTML Canvas as our image editor, we also implemented front-end algorithms for our tools in order to select, move around, and fill in space to construct our blend bitmask. Finally, we sent the input data to our Flask backend to produce and display the blended image. 
+
+
+Inspiration: Our inspiration for this idea came as we are becoming of age to drive and as we recognize the importance of safety on the road. We decided to address the topic of driver safety, specifically, distractions while driving, and crash detection. We are bombarded with countless distractions while driving, and as cars are at their fastest, the roads are significantly more dangerous than ever before. With these thoughts in mind, our project aims to make the roads safer for everyone, cars and pedestrians alike. We created a project that would notify and assist drivers to be focused on the road and send emergency messages when a crash is detected. Our goal is to make sure everyone on or near the road is safe and that no unnecessary accidents occur. 
+What it does: The project is a live eye-tracking program that would increase overall driver safety on the road. Using the AdHawk MindLink, our program tracks the gaze of the driver and determines if the gaze has left the designated field of view, if so, causing auditory and visual notifications for the driver to re-focus on the road. The program also detects an open eye for 45 seconds or a closed eye for 45 seconds. If such conditions arise, the program recognizes it as a fatal crash by sending out a text message to emergency services. The eye tracking programming is made with python, an emergency text program with Twilio and the hardware is third-generation Arduino Uno integrated with a shield and equipped with a buzzer, LED, and programmed with C++.
+How we built it: The base of our project was inspired by AdHawk’s Mindlink glasses. Using Mindlink, we were able to extract the horizontal and vertical coordinates of the gaze. In combination with those position values, and predetermined zones (10 degrees on each side of origin), we programmed the Arduino to a buzzer and LED. For crash detection, we used an event, “Blink”, which will detect whether a blink has been made. However, if a blink is not preceded by a second one in 45 seconds, the program will recognize it as a fatal injury, triggering Twilio to send text messages to emergency services with accurate location data of the victim.
+
+
+Inspiration: The inspiration behind Happy Hours stems from the question “How can we make getting people together more convenient?”. The biggest roadblock for many organizers is people not being available regularly to communicate, and managing the many different interests of those involved.
+What it does: Happy Hours streamlines the social planning experience through the automation of activity recommendations and scheduling suggestions in a collaborative environment. Users can access the plans at their discretion and no longer have the burden of organizing a fun day onto one person.
+How we built it: Happy Hours was built using a collage of different APIs and frameworks. The primary component of Happy hours is natural language processing (NLP) to transform things you want to do into events and locations. Happy Hours uses the Co:Here API to transform desires such as “I want to eat shawarma” into practical places that you can attend. 
+
+
+Inspiration: As students ourselves, we know that English classes aren't always the most fun. So, we set out to create a project that was both effective at teaching English and interactive. The purpose of this project was to also to help students in improving their skills such as multitasking and reaction time.
+What it does: None
+How we built it: We built our game using Unity, the Adhawk Meta Oculus Quest 2, and the Adhawk SDK. We began this project with a crippling lack of knowledge, however with a lot of help from Adhawk (Thank you Nick!!!), we were able to learn and build a game in VR. We started with basic ball and hand interactions, and built it into a real game. We put together a functional VR game through botchy hacks on hacks. By staying up until 5 am and mashing our keyboards we 
+
+
+Inspiration: One of our members, Japnit, runs a Non-Profit Organization, Go Girl (https://www.gogirlorganisation.com/), to teach underprivileged girls how to code for free in India. They have taught over 2000 girls in the native Indian Language. One major challenge they face is understanding and determining the quality of lectures provided by tutors. They need to ensure that quality education is imparted to students from remote and rural India, especially in the online mode. Whether these lectures are engaging and the speech manner is appropriate for the class needs to be determined. Empirically defining the quality of these lectures/teaching sessions is challenging and a laborious task to go through recordings manually. That is until we developed this product to provide instant feedback for speakers and presenters to help them develop their presentation skills with actionable items. 
+What it does: 1. Instant multimodal feedback for speakers to help improve their presentation skills:
+Giving presentations, speeches or awesome elevator pitches can often be a daunting task. By getting instant feedback on their presentations, speakers can either practice long stretches at once or complete crucial last-minute preparation for that pitch. Using a congregation of NLP, image and audio processing tools, our software provides instant feedback to the speakers and helps them improve their presentation in three different aspects, namely expressions, tone, and content.
+How we built it: None
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: With the lack of accessible student housing in recent years, demand for public transportation has skyrocketed—including GO Transit buses that depart from McMaster University and head towards destinations in Mississauga and Brampton. Students wait in line for hours on end as buses fill up before they can board, entailing the dreaded wait for the next bus. And so, we were inspired to address this problem with time.ly, a web application that allows passengers to reserve their seats ahead of time, avoid physically standing in long lines, and ultimately encourage use of public transportation by improving its experience.
+What it does: time.ly is a web application that first, allows users to select their needed bus and time of arrival, and thus reserve their seat on that bus if there is a free spot. By eliminating the uncertainty of whether or not they would be able to fit on the bus once they arrive, time.ly saves bus commuters' time and removes the hassle of having to physically wait in a line for indefinite amounts of time.
+How we built it: Initial wireframes incorporating UX/UI design principles were created using Figma. The frontend was built with ReactJS, while the backend was written with Python and deployed with Flask.
+
+
+Inspiration: We were inspired by a number of things to build this tool, we're very close to people with severe allergies, we've seen youtube videos of moms trying to avoid added sugar in their food, and we both have a passion for food and cooking, these factors inspired us to create a multipurpose tool that allows people to ditch reading those tiny, incorrigible ingredient lists and know what's actually in their food. Wether you're looking for dangerous ingredients to you, ingredient preferences or avoidances, or you're just a big fan of pastel colours, glance is a tool aimed to help everyone know exactly what they're eating at a glance 😉
+What it does: glance allows users to select an ingredient (like shellfish) or category of food (like dairy) to look for in the picture of the ingredient list they take on our webapp. We also provide an option for users to manually enter ingredients they're unsure of or the scanner does not pick up. The list of ingredients is then checked against the users selected preferences and a table of results are provided letting the user know at a glance if the food contains any of their flagged ingredients or categories. 
+How we built it: glance is a web app created using the react.js framework for our frontend and node.js for our backend. We leverage co:here's classification library to classify ingredients into categories and the tesseract image to text library to convert the ingredient picture into useable text. 
+
+
+Inspiration: The "Fast-Slow" is a debugging technique well-known amongst experience competitive programmers. Typically, programmers fast-slow their problematic algorithms by setting up a local environment and running scripts, which not everyone know how to do and may be time consuming. We created Fast-Slow Debugger to make the process of fast-slow debugging convenient and accessible for everyone.
+What it does: The fast-slow consists of three components
+How we built it: This web application was built with Express.js for the backend and vanilla HTML/CSS/JS for the frontend.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Pulls a dad joke from a website and allows you to send it to varying locations (ie: Text Message, Email, Discord)
+What it does: Pulls a dad joke from a website and allows you to send it to varying locations (ie: Text Message, Email, Discord)
+How we built it: Through Google App Script which allows access to all the G-Suit docs where we can record and send dad jokes whenever. The script is set to run once a day for a daily dad joke.
+
+
+Inspiration: How might we keep track of the "good old days" before we leave them?
+Take Knote was born out of the absolute mess of our camera rolls and message groups as our nwPlus crew travelled to Hack the North 2022. We had plenty of iconic moments and memories we never want to forget, and the way we're "documenting" our trip right now is simply not cutting it. 
+What it does: Take Knote is a shared digital scrapbook for you and your crew to share, whether that's a significant other, your BFFs, or a beloved hackathon team. With Take Knote, you can enjoy an easy, straightforward experience in:
+How we built it: Take Knote is powered by the MERN stack:
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Let’s be honest… who doesn’t listen to music on their way to school or while on a quick morning run?
+What it does: Beats to the Step is a mobile app that allows you to find the perfect music with the perfect BPM (beats per minute) for your everyday walk or run. This way, your music will always align with the pace and frequency of your footsteps!
+How we built it: To verify whether our idea would benefit other users, we did some research and found data regarding the effects of music on individuals’ walking behaviours, where we found out the optimal running tempo for synchronization with music was 120bpm to 140bpm.
+
+
+Inspiration: Have you ever travelled to a country with a language you can't understand? Are you tired of constantly pulling out your phone to open a translation app? Want a fast and convenient way of translating a foreign language in real-time? Then TraveLens is the perfect solution for you!
+What it does: Read any text and blink your eyes twice to capture a block of text. Then, listen as the text is translated and played out loud automatically!
+How we built it: Prior to HTN, no one on the team had ever used any of these APIs before, so there was quite a steep learning curve for every member of our team. 
+Additionally, fine-tuning the eye tracking software to properly track the coordinates of our gaze proved to be quite difficult. We had to employ many different methods to track and record the coordinates, which involved a great deal of trial and error. 
+Cropping the image also proved to be surprisingly difficult. We had to figure out how different 3D coordinate systems acted on a 2D image, and how these interactions could help us crop out intended blocks of text.
+Finally, we utilized a variety of different APIs, to help with language identification and translation. To map all of the various features together, members of our team had to surf through mountains of documentation and YouTube tutorials!
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Do you remember the feelings of wonder and joy that swept you away when playing one word stories as a kid? You would take turns with a friend thinking of just one word at a time to create a compelling story, and at every moment you could feel the world at your fingertips. We wanted to create something that would be able to replicate those amazing memories, and we came up with www.onewordstories.tech.
+What it does: Our project allows users to take turns developing a story word-by-word with NLP from co:here. The number of words per turn can be configured from a minimum of 1 to a maximum of 10 words. Feeling stuck? No problem! Our custom "I need inspiration" button skips the user's turn and gets the AI to go instead. Based on how the user is feeling, the story can either start off with a generic or spicy introduction. If the story is going nowhere, the "Reset" button always comes in handy.
+How we built it: The website was built in React with the help of Material UI. To generate text using co:here's API, we ask the API to continue the story with certain parameters that we provide.
+
+
+Inspiration: Our team's common interest in skipping through lengthy terms and conditions brought us together to create TC;DR - Terms & Conditions; Didn't Read. Terms and conditions are often overlooked as something we can all turn a blind eye to, not worth the time it takes to look them over. 
+What it does: TC;DR's allows users to condense lengthy documents of text into summarized content that is easily digestible. The web app displays its results on-site-- allowing for convenient comparison between both the original and abridged versions!
+How we built it: Our app makes use of the co:here API to summarize text using our own trained model made from sample terms of service texts. The backend is written in python, running a Flask web server. It can be run directly in your browser, where the user is able to input their terms & conditions as text. The frontend is written using HTML, CSS, and JavaScript for a clean and user friendly experience.
+
+
+Inspiration: Ever been stuck in a dry conversation full of painful, awkward pauses? Fear no more! mood FM provides your own personal mixtape (a personalized 'radio channel,' if you will), to play background music suited to the nuanced mood of your conversation.  mood FM gives you the perfect movie soundtrack for each moment of your life to give you the main character energy you deserve.
+What it does: When you choose to “read the room,” mood FM listens to your conversation and interprets the contents of your speech to determine the mood you’re in.  Then, it finds a song to complement that mood automatically so you always have the perfect soundtrack playing in the background.  mood FM also tracks your emotions on a daily and weekly basis to help you spot potential trends and ensure you’re taking care of yourself.
+How we built it: 1. Wire-framming and Front-end 
+As a medium of use, it was necessary to build a front-end component to our application as a way to prompt the user to record input, and to relay a specialized playlist based on their mood. Both preliminary and high-fidelity wireframes were designed and validated in Figma before using React.js to bring our ideas to light. 
+
+
+Inspiration: Non-fungible tokens (NFTs) have raised interesting questions:
+What it does: ThisNFTDoesNotExist.tech generates an image that could plausibly be an NFT, but is not.
+How we built it: The core of the generation process is a Generative Adversarial Network (GAN). Two deep learning models, a generator and classifier, compete against one another in a zero-sum game to generate images that are indistinguishable from real images according to the classifier.
+
+
+Inspiration: Sad but true, as babycare and healthcare keeps on getting more and more expensive, gen Z and gen X would rather have pets than babies. Convenience , or consequence of capitalism - call it what you want but it’s true and what is also true is that this is a growing industry with a lot of potential.
+On a more personal level, each of us either has a very strong bond with their pets or is very eager to get one when they can afford it and care for it. 
+What it does: Only Paws is a platform for the little creatures (or sometimes even large. We don’t judge)  that we value more than ourselves. Currently, we can use the web application to find pet caretakers as easily as swiping right on tinder. The whole idea is to create a trustworthy and kind community of pet owners and caretakers. The matching of the owners and caretakers is done based on shared interests and the time of availability is visible for a truly transparent and hassle-free experience.
+How we built it: The process of our creation began with an idea - to create a digital product/service for something meaningful to us and after a whole series of discussions, we agreed upon only-paws. The next step was to decide on a framework and the libraries from HTN that we were going to use. NEXT JS was clearly the winner because of the convenience with routing. We agreed upon using CockroachDB as the star of our application as it is very efficient and relevant for only-paws to keep the data about our users.We had more discussions about how much we wanted to do for the app and how much we were willing to settle for considering the relatively small timeframe of the hackathon. We still decided to proceed with the idea and delegated the work in between members based on their experience level and skills. Front-end, back-end, design, libraries and assistance work was divided. Everyone started working on their designated portion but we often kept on checking on and helping each other.  There were many times the documentation was discussed as a group or someone who had some experience with a particular technology, shared it with the rest of the group. The project really started coming together on the third day or should I say  9 hours before submission when a lot of our frontend and backend was done. The rest of our time was devoted to integrating the back-end to the front-end as well as polishing the UI and enhancing the user experience. Then it was time for testing, deployment and finding urls
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: When we arrived at Hack the North and received the IDs embedded with QR codes to identify ourselves, we thought “How can we build on this idea to be more encompassing?”.  How could we apply modern experimental technology into a practical product so conference experiences could be bettered for participants? After careful deliberation, we decided to combine the latest Web3.0 Technology with traditional events to create NFTake It. 
+What it does: NFTake It is an innovative tool that will make your conferences and [gatherings] more memorable and streamlined. When you initialize the application, you’re greeted with a friendly screen to submit key information that’s valuable for the event. Then, the application turns into your own photo booth where you can snap a selfie! The picture becomes a permanent memory of the event because it is then converted into an NFT, stored inside your personal wallet. The NFTake It of each NFT means that they can also be used to identify participants, selfies linking a human to their information. 
+How we built it: The backend for the decentralized blockchain was built on Scaffold-ETH, where it allowed to easily tokenize our data and create an NFT out of pictures. The rest of the web application was built on React.js, written in Typescript. The frontend was fleshed out using Material UI and Socket.io to transfer data between each other.  
+
+
+Inspiration: None
+What it does: An AR and CV based artist's aid that enables easy image tracing and color blocking guides (almost like "paint-by-numbers"!) 
+It achieves this by allowing the user to upload an image of their choosing, which is then processed into its traceable outlines and dominant colors. These images are then displayed in the real world on a surface of the artist's choosing, such as paper or a wall.
+How we built it: The base for the image processing functionality (edge-detection and color blocking) were Python, OpenCV, numpy and the K-means grouping algorithm. The image processing module was hosted on Firebase. 
+The end-user experience was driven using Unity. The user uploads an image to the app. The image is ported to Firebase, which then returns the generated images. We used the Unity engine along with ARCore to implement surface detection and virtually position the images in the real world. The UI was also designed through packages from Unity.
+
+
+Inspiration: I really didn't know what to do, and after racking my brain for hours, this hot garbage is what came out.
+What it does: It's pong, but it spins. Controls are
+Player 1: Up Down Arrow Keys
+Player 2: W S
+Player 3: T G
+Player 4: I K 
+How we built it: Godot and gdscript baby
+
+
+Inspiration: We love cats and we love wizards! But above all, we love a cool game with an interesting concept. For our game, Wizard Cats, we wanted to explore the intersection between fighting games and drawing games.
+What it does: Players face off in a 1v1 duel, where the main gimmick is the spell-drawing feature. By drawing different symbols with their mouse, players can cast spells to do a variety of actions.
+How we built it: Wizard Cats was built using Phaser 3 and Firebase.
+
+
+Inspiration: All 3 of us are University of Waterloo students and have experienced many scary geese in our days here. So we wanted to create a visual representation of the way the Waterloo geese act while learning new skills. Specifically how certain aggressive geese decide to follow you as you are walking to class.
+What it does: Mr. Goose on the Loose, is a very smart goose that can learn the fastest and most rewarding path to the Waterloo student as it continues to attack the same student. There are buildings that Mr. Goose cannot get through (brown boxes) and cages (black tents) that send Mr. Goose back to the start. This is without any user input and is shown on the screen using GUI libraries in Python.
+How we built it: We harnessed reinforcement learning strategies in Python to have Mr. Goose learn from every successful attack of a Waterloo student. Using libraries such as Tkinter, NumPy, Sys and Pandas we were able to display a visual design with a grid, walls, grass and cages. 
+
+
+Inspiration: With information and online assets becoming more prominent in society, people are pushed to maintain an online presence. Many despise taking time to update their online presence, yet it is a task that more and more people accept as normal.
+What it does: Given input about words and ideas a user wants to include in their review, Speak Up! will appropriately generate an appropriate review. Thus, saving users from taking too much time to make their online presence known.
+How we built it: We used React, Cohere API and Javascript to build our webpage.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: We really liked this popular show and thought to ourselves, “those games looked fun!”. We made our dreams come true by making the hottest toy of 2022, what we are calling the ‘Game of Squid’ (no copyright intended).
+It’s all the fun of the show’s hit game and cultural classic ‘Red Light, Green Light’, but with half the bloodshed!
+What it does: Game of Squid is a hardware-software system that runs the classical game “Red light, green light” from a popular show. The rules of the game are simple, when the game master calls “Green light”, players are allowed to move from the start line towards the finish line. Whenever the game master calls “Red light”, players must immediately stop in their tracks, if they are caught moving, they are eliminated from the game.
+How we built it: Our product is split into two sections, software and hardware. 
+
+
+Inspiration: In grade 5 our teachers told us about an ingenious kid who, when given a date, can instantly tell people the total days passed from 0 AD to get to the given date.
+What it does: The mini program, when input with a date in natural number format, can tell users the total number of days passed since 0 AD to get to the given date.
+How we built it: It was build in BSL in DrRacket, relying on predicates.
+
+
+Inspiration: When talking with the sponsors at the sponsors event, many companies like ETH and Axelar talked about the rise of web3, a new and improved way of creating applications. The idea is focused around decentralization, where individuals had ownership of the data, and this really interested us.
+What it does: Our application allows businesses to create digital receipts that belong to a certain individual. Each individual has ownership of their own receipts and can use it refund their bought products. 
+How we built it: We built it using we Javascript, react, express, mongodb, and solidity. 
+
+
+Inspiration: The goal of this story was to follow the guidance of keynote speaker and musician will.i.am, who inspired us with his speech on the unity between tech and art— be it musical, visual, or literary.
+What it does: A student ends up murdered by a mysterious killer who leaves a trace of matcha powder on his victims. As a detective, it is your job to interrogate the 3 prime suspects : the janitor, teacher and classmate to find out who the culprit is. The game uses a mix of pre-set dialogue as well as question options to ask each character to move the game forward. After speaking with all suspects, you will now have to make a decision.
+How we built it: We used the package Ren’py to implement our code which was really easy to use and learn quickly. Ren’Py is a script language written in Python and it was a great choice for beginners like us.
+
+
+Inspiration: Do you remember getting home from school as a child and opening the door to the smell of freshly cooked rice? I know I sure miss it, unfortunately we cant build you a mom, but we've got the next best thing, a robotic rice cooker.
+What it does: A robotic rice cooker? Seems easy enough, sure we should have just put rice and water into a rice cooker, close the lid and press a button. But no, we wanted to go the extra mile, our robotic rice cooker and can even be remotely controlled so you can time your next meal, and have a fresh bowl rice right when you get home.
+How we built it: 
+Hack the North 2022
+
+
+
+Inspiration: We noticed that UW has been providing menstrual products in bathrooms across campus. However, off-campus, emergencies still arise. Along with the healthcare system being overwhelmed and ambulance times being delayed, MedNow weaponizes location data to help deal with emergencies. Whether you need a menstrual product, bandaid, EpiPen, or even CPR, someone nearby may just be able to buy you a little time before the ambulance arrives or the issue resolves itself. 
+What it does: MedNow is a mobile app that takes voluntary “medics” and sends them notifications when someone needs help. When a patient clicks “Help,” their information such as medical history, emergency, and location data are sent to either basic medics or intermediate medics, basic being those who could deal with something like a bandaid and intermediate being those who are first aid trained and could deal with larger issues. If and when the paramedics arrive, they will have special authentication to scan a QR code to receive the patient’s health card info and more detailed personal data than what was provided to the medic. MedNow also includes an educational page of basic first aid demos and a monthly summary logging how many people you’ve helped. 
+How we built it: We built MedNow using the Expo platform to develop a React Native app, taking advantage of its cross-platform development capabilities. Thus, MedNow runs on both iOS and Android devices. Additionally, our UI/UX was designed using Figma, where we created mockups depicting the app’s visual design and well as user flow. Finally, throughout development, we collaborated using Github.
+
+
+Inspiration: After witnessing the devastating effects that medical research misinterpretation and fake news had in our country, Brazil, during the pandemic, it was made clear to us that something needed to be done about the issue of statistical illiteracy to help everyone, in special, researchers earlier on in their carrers to read better articles, to be more confident in their analysis and make fewer mistakes during clinical practice.
+What it does: Arandu is an artificial inteligence plug-in that, through deep learning techniques, analyzes the METHODOLOGY and RESULTS sections of medical studies in order to see if the conclusions metrics chosen by the authors are methodologically consistent.
+How we built it: We used Co:Here's API on Natural Language Processing to create an artificial inteligence that was fed study methodologies using Co:Here's Playground. We also developed a statistical framework for study analysis, done through a thorough medical literature review. Then, we developed our 2nd AI through Co:Here's API, to analyze the results and metrics. To finalize, the process was integrated using Python 3.9 and the slides and concept art were sketched on Canva
+
+
+Inspiration: Being a student can be exhausting, and who would rather spend hours after class making flashcards when NLP could do it for you?
+We take care of the entire flashcard generation process so students can focus on studying for their next exam!
+What it does: in:decks leverages the Cohere API to automatically process and create index cards from user-inputted text.
+How we built it: 
+Hack the North 2022
+
+
+
+Inspiration: Single cell RNA seq (scRNAseq) has recently been popularized as it provides researchers with the ability to determine which genes are being expressed in certain cell types within different conditions. This helps in downstream applications, such as being able to target a specific gene in its role in a certain disease. The problem however, is that different researchers use different methods in performing scRNAseq. With there being so many different methods of performing scRNAseq, variation may occur merely due to the differences in how the scRNAseq was performed. I sought to make a pipeline that is easy to follow, and one that will allow others to use on their own data.
+What it does: This pipeline takes in matrices containing information such as the RNA nucleotide sequence that was taken from the sequencer device, and first performs quality control steps to remove poor quality cells. The data is then normalized, more cell filtering is performed. Based on what genes are being expressed, the  cells are plotted into clusters. From there, you now have your data annotated to show what cells you have present in your sample (ex. your sample contained B cells), as well as what genes were found to be expressed/absent.
+How we built it: None
+
+
+Inspiration: Our inspiration for Pi-Casso came from our tedious experiences with freehand drawing in design class at school. We realized that sketching and drawing can be very challenging, even for fully able people. Therefore, we looked at HTN 2022 as an opportunity to design a system that would allow disabled people to create “freehand” sketches. 
+What it does: The Pi-Casso uses the “Adhawk Mindlink” vision tracking system and a 2 axis actuating bed to convert the user’s eye movements into a drawing. The vision tracking system is calibrated to detect where the user is focusing their vision with respect to a predetermined grid of coordinates. As the user changes their point of focus, the system detects the new direction. Pi-Casso will use this change in vision to create a drawing. If the user looks towards the right, the Pi-Casso will begin to draw a line towards the right. When running, the Pi-Casso will continuously track the user’s vision and create a physical image from it. To pause the system, the user takes a long blink. If another long blink is taken, the system will resume. 
+How we built it: First we set goals and expectations for the controls and mechanical aspects of the project’s design. We separated our team into groups of two, one for the controls and the other for the mechanical, then prioritized and delegated responsibilities accordingly. For the mechanical aspects, we began with preliminary sketches to rapidly develop several possible designs. After discussion, we settled on a specific design and began CAD. We went through multiple design iterations as new problems arose. As construction finished, we made numerous changes to our original plan because of unforeseen issues, such as failures in 3D printing. 
+
+
+Inspiration: Our team was inspired by how projects such as Waterloo Waterworks and forest fire maps were able to take data and give meaning to it through visualization. We were also inspired by the effect large collective data projects can have on people who feel emotionally isolated when they realize they are not alone. Finally, we were inspired by the potential of co:here's NLP API and wanted to see how we could use it to process data on a large scale to return useful and compelling conclusions. 
+What it does: With the combination of these ideas, we decided to develop a program that took responses to the prompt "How are you feeling today?" and added them to a dataset. Each response was analyzed and given a sentiment score. We wanted to give meaning to our data by representing it in a visually interesting way. The data was arranged using an algorithm that graphically layered each of the responses depending on how positive or negative their sentiment was, and we also developed an algorithm that concluded the overall "vibe" of everyone's day.
+How we built it: In order to create our best work, we played to the strength of each of our team members. The backend connection and analysis algorithms were developed using Python, and the frontend was designed using Figma and implemented using JavaScript and Processing. Flask was used to bridge our front-end and back-end components together.
+
+
+Inspiration: None
+What it does: When the user starts an audio, the voice is recorded and stored as an mp3 file. Then the mp3 file gets uploaded as an input file into the AssemblyAI. Subsequently, the AssemblyAI starts processing the audio recording and gives 3 separate outputs; the transcript of the audio file to be shown to the user, the summary/ key points of the session/ audio file determined by the AI, and the sentiment analysis of the user based on the recording. The sentiment analysis gives a "Positive", "Negative", and "Neutral" verdict and the system's confidence rating for each verdict for each sentence said by the user. Based on that data, we compile an overall feeling of the session and represent the data to the user in a circular statistical graphic.
+How we built it: We built our app by using React for the frontend specifically the chakra-ui React library. For the backend we used Flask as our local server and we used AssemblyAI's audio intelligence to provide our service with insightful data that would be used in our attempts to provide a more convenient diary or self care site.
+
+
+Inspiration: One of our first ideas was an Instagram-esque social media site for recipe blogs. We also were interested in working with location data - somewhere along the line there was an idea to make an app that allowed you to track down your friends. 
+What it does: Markets and Shelters/food banks log in to their respective homepage. From there, they can see the other establishments near them, as well as an interactive sidebar. 
+How we built it: We used next.js and a variety of different style options (css, bootstrap, tailwind.css) to make a "dynamic" website.
+
+
+Inspiration: I was inspired by my experiences during my first few weeks of university. By the end of these two weeks, my phone's gallery was full of pictures of class notes, posters, stories and other interesting stuff I had found across the campus. I wanted a quick way to convert all those pictures into text files so that I can easily save and search through them when needed. I tried using online handwriting to text converters, but every single one of them failed at creating a coherent transcription. There were always missed words, some random errors, weird spacing, or they outright couldn't understand my handwriting. When I learnt about cohere's NLP APIs, I realized that it could fill in that gap, and provide me much better transcripts than what I could otherwise generate.
+What it does: TxtScribe allows you to click or upload a picture, and it will automatically generate a transcript for the text. Other than that, it'll also provide you with a quick summary of the passage, allowing you to read over the entire paragraph easily.
+How we built it: TxtScribe was built by me, over the weekend, with Python, Flask, and HTML5. I leveraged the power of google cloud to run the handwriting detection algorithm, which is then drastically enhanced with the power of cohere's APIs. I also use cohere's NLP Generation API to generate a quick summary of the text.
+
+
+Inspiration: We have had experience with similar tools in the past but had not taken the time to consider the practical applications of this technology. When chatting with the Co:Here team this weekend we were inspired to explore how we could take this technology and use it to develop a meaningful product of our own. 
+What it does: Our project uses the power of Natural Language Processing to aid students with their literary endeavours.
+How we built it: Combined HTML, CSS, javascript, Bootcamp, node.js, browserify and the co:here API in order to build this project.
+
+
+Inspiration: Realizing how often our friends forget to take care of their personal well-being while hard at work, we decided to create a Google Chrome extension that would remind them to keep up healthy habits. All students could use a bit of reminding that their physical health is just as important, if not more, than the work on the screen in front.
+What it does: Take Care sends periodic notifications reminding the user to keep healthy habits, such as drinking water, eating food, giving your eyes a break, and more. Additionally, there is a progress bar of each habit so when you can keep track of your advancements the different categories.
+How we built it: We used JavaScript, HTML, and CSS to code our habit helper, utilizing various resources to learn how each component fits together. For fun/challenge, part of the project was coded directly off of GitHub without the use of external IDEs. 
+
+
+Inspiration: We were inspired to create Hackgenic after we were having trouble deciding on what project we should make for this hackathon. With multiple members with such different experiences, skills, and interests, it's sometimes hard to find commonalities and decide on a project that everyone agrees on. It can be very difficult to choose a project, and when faced with a completely blank sheet of paper, many people find that they need a few preliminary ideas to bounce off of.
+What it does: That's why we built Hackgenic. This is the perfect app to help you choose a project to create, as it asks for input on your interests, any preferred languages or frameworks, and some demographic information to provide you with multiple project ideas sure to fit your needs and interests.
+How we built it: We built Hackgenic using only HTML, CSS, and JavaScript.
+
+
+Inspiration: Can you read this? Most likely, your answer is yes. But with 15% of the global population being afflicted with reading disorders, and approximately 2.2 billion people worldwide with near or distance vision impairment, this answer is far from universal. Raven aims to fix this, by providing a product that increases accessibility to language and comprehension in a simple pair of spectacles.
+What it does: Raven uses the AdHawk vision tracking glasses to determine where in the world users are looking. It then uses optical character recognition (OCR) to read any text in a persons line of sight, and pipes it through a text-to-speech engine to read that text out loud for them. With Raven, people with vision impairments no longer need to despair over struggling to read, and those who benefit from an auditory cue while learning may have a tool to supplement their engagement with the written word.
+How we built it: Raven was built using the AdHawk Mindlink and their proprietary API that accompanies it. Their API allowed for focus, gaze, and eye tracking, which allows us to easily situate our user in their world, and identify the objects around them. This information is then piped through the Tesseract OCR algorithm, which returns a corpus of text that the user is trying to read. Finally, this text goes through the PyTTS text-to-speech engine, which translate the written word into the spoken one. 
+
+
+Inspiration: Have you seen videos like "Donald Trump singing Havana" getting 100 MILLION+ views? Or want to see a celebrity saying something specific? Usually, you would need dozens of hours to find these videos, listen to them to find the words you want, trim them, merge them, etc. But with Celebsays, you can do it with a few words and a click! 
+What it does: Celebsays allows you to create a merged clip of your favorite celebrities based on the prompts you enter. Need a helping hand on coming up with a funny prompt? Our autofill feature powered by Co:here can help you with that!
+How we built it: First, we used the yt_dlp library to download youtube videos of celebrities as mp4 and mp3 files given a link. Using AssemblyAI's transcript tools to get the transcript from the YouTube videos into a json file, AND we'll separate the speakers in a video if there are multiple, so we can ensure the clip we're taking for the merge video will just be the celebrity. Next, we used cohere API prompt generator for extra funny prompts. Afterward we'll match the prompt words into the transcript and extract the seconds where the celebrity says the phrase. Afterward, we trim the video to that moment. Do this for every word in the prompt, merge it, and you have your final video!
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: When our team exchanged common interests, food was on all our lists. Since we were interested in learning mobile development, we made an app with Flutter for our first time. 
+What it does: Our app lets you search your favourite recipes, providing links, images and all the necessary information in one click.
+How we built it: We used Flutter and Edamam API for our app.
+
+
+Inspiration: As students faced with hybrid/online schooling, over the past 3 years, due to the Pandemic, watching hours of video lectures, can no doubt, be extremely daunting. Furthermore, post pandemic, the same goes for recorded lectures. As such, we've designed a convenient, intelligent solution. 
+What it does: LecSum, a website which produces textual summaries of video lectures, using the AssemblyAI API. 
+Lecsum allows students to study smart, and save time, in which they can focus in academic pursuits elsewhere. 
+How we built it: We used AssemblyAI to convert the speech to text and then to summarize the text and generate chapters. The frontend was developed using React and the web app was deployed on GitHub Pages.
+
+
+Inspiration: Dining in an unfamiliar city can be tough - how will you know what each restaurant has to offer until you walk inside and see the menu? While some restaurants post menus outside, we have offered an even simpler solution: InstantMenu. The InstantMenu app will track your location and can open the menu for a restaurant as soon as you walk by.
+What it does: Instant Menu does what it says on the tin: as soon as you walk into a restaurant, our location tracking services will notify your phone and redirect your browser to the appropriate menu page for that restaurant. Currently, our app is only set up to track one restaurant location, but in the future we would plan to extend this to multiple restaurants and locations.
+How we built it: The app itself is an Android app that integrates with the HyperTrack API to repeatedly update the user’s location and compare it to a target (the bounds of the restaurant). Then, when the app receives the response from the API that it is within the bounds, we automatically open the menu in their browser.
+
+
+Inspiration: Our inspiration was to help learners, especially younger audiences to have motivation to learn a new language.
+What it does: In the game, the user has to save a balloon by popping(hence bop) by speaking to the computer the right color of the balloon right in a foreign language(in this case, french)
+How we built it: We used pygame to create the game and assembly ai for the speech recognition.
+
+
+Inspiration: Gaining users for a new product is always a challenge for a new company.
+After completing our first co-op terms at start-up companies, we experienced the limitations of product testing first-hand and knew that there must be a better solution. QA teams at our companies would often face the roadblock of ‘tunnel vision’, and get one-dimensional in terms of finding bugs/going through the SDLC, instead of focussing on what really matters to the consumer: User Experience. 
+What it does: Testify is a website that gives companies access to user experience feedback right from the nectar, which is their target audience, the consumers. A company can register with their product, a description about their service, along with details about their target audience such as age group and industry. 
+As a user, upon logging in you are shown a list of companies that are handpicked for you by our matching algorithm; for whom you can be a tester. After using the software product, the user fills out a review form where you can provide a rating, feedback and/or screenshots of any bugs or design faults that stand out to you.
+How we built it: Once we had our idea the first step was looking into how all of the technologies worked to ensure that it would all work together. After thinking of a general plan for how we would build out the project we split up into frontend and backend teams and got to work. We settled on using Next.js for the frontend due to our previous experience with it and the optimizations over React.js. We used Tailwind to style various components of our webpages.
+The backend is comprised of a Serverless CockroachDB database which was linked to a Express.js engine. We decided to use CockroachDB instead of other database services because of it is a distributed database system that is easily integrable with an API.
+As a bonus we wanted to use co:here to provide useful insights to the company while being able to make the feedback experience short and seamless for the user. Our NLP model automatically sorts the feedback into categories that can be worked upon by the company.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Racking our brains in the brainstorm session, our team was trying to come up with a big idea for our HackTheNorth project. Nothing was speaking to us. We were experiencing something like writer's block or artist’s block… If only there was something to help us with creativity?
+And so PROMPTO was born to answer that wish.
+What it does: PROMPTO asks users to input simple words or phrases and outputs beautifully stringed prompts crafted to entice your imagination. These outputs are then re-inputted into the program to continue to generate more and more wild ideas. It also categorizes all these outputs and stores them for your browsing pleasure. You can add your favourite outputs to a list and view them together. PROMPTO is not like other prompt generators. This one is smart, speaks to you, and is always learning to improve and give you real unique ideas. Whether you are an artist, musician, author, or just looking for some creative inspiration, PROMPTO will help you clear that creative block and help you design something special.
+How we built it: Cohere's natural language processor was trained through multiple iterations of input words and phrases to fine tune the output style. We want the resulting prompts to be interesting and influenced by the input while also bringing something new to the table. These outputs are also classified into nine categories: adventure, art, food, hate, language, love, nature, technology, and miscellaneous using Cohere’s classifying abilities. The psycopg2 Python library was used with SQL for CockroachDB. This database stores all the outputs and also puts them in their separated categories. The favourited prompts are also put in their own category to further train the AI. Node.js was used for testing and training. HTML, CSS, and JavaScript, are used to create the website to display our work. Figma and Adobe Illustrator were used for UX/UI design to ensure the design is aesthetically pleasing and convincing. We prioritize our users getting a clean and painless experience with our visual design. Finally, Github Pages is used to host this website.
+
+
+Inspiration: The inspiration for Washes came from Roombas, automatic vacuums. I took it one level further by pushing the limits, bringing a typically large machine into a small, and consumer friendly format. 
+What it does: Embarrassing trips to the store are no longer a task! Simply wash your car with remote start before leaving.   
+How we built it: None
+
+
+Inspiration: Patients often have trouble with following physiotherapy routines correctly which can often lead to worsening the affects of existing issues.
+What it does: Our project gives patients audio tips on where they are going wrong in real time and responds to voice commands to control the flow of their workout. Data from these workouts is then uploaded to the cloud for physiotherapists to track the progress of their patients!
+How we built it: Using the Kinect C# SDK we extracted a human wireframe from the sensors and performed calculations on the different limbs to detect improper form. We also used the .NET speech libraries to create an interactive "trainer" experience.
+
+
+Inspiration: With the technological landscape expanding ever so rapidly, it has had a great impact on the gaming industry, for better and/or worse. Games have become ever so complex, resulting in the creation of many technological masterpieces, however, it has become harder than ever to just jump in and enjoy playing a game or two with a friend or sibling. 
+What it does: Tempestuous Turrets simplifies gaming by making it accessible to as many people as possible. Our goal is to give people a memorable time with the ones closest to them. With the use of only ONE button, each of the four players can control their own turrets to shoot through obstacles and at each other, taking part in bitter-sweet rivalries and friendly competition to see who is truly the most tempestuous. 
+How we built it: Tempestuous Turrets is built using the Unity game engine and C#. We wanted to create something unique, but also special to us, which is why we created all of the art assets ourselves during the hackathon. We started simple, with just turrets that rotate and shoot projectiles. Then, we let our imagination take us through creating fun, hilarious, and exciting maps with a variety of obstacles. At last, we used Github Pages to host our WebGL Game and get our domain name from domain.com.
+
+
+Inspiration: It's too hard to tell if a job aligns with what you want when searching on job boards and internship sites, so it would be nice if there was a tool to rank the jobs automatically based on your preferences. This way, we can save effort from applying to irrelevant and suboptimal jobs.
+What it does: SuitYourJob uses several different APIs to curate a collection of internship opportunities, then asks the user for a list of positive and negative phrases. It then uses Cohere API to apply natural language processing to the job descriptions, ranking the jobs based on how closely the description aligns to the user's desires semantically.
+How we built it: We used tools such as Serp API and web scraping to query job sites for positions, then used the embed endpoint of the Cohere API to analyze the job description. We take two lists of strings from the user as input, a list of positives and a list of negatives. By comparing the embeddings of each string in these lists with the description with cosine similarity, we can use natural language processing to understand how much the description matches with each of the user's criteria. We use these results to produce a rank, and display the highest ranked jobs to the user for easy application.
+
+
+Inspiration: We wanted to make a project that had real-world applications that would affect us all personally. We initially thought about medicine reminders, soil quality, and emergency room overflow. When considering a project to streamline ER wait-times, we were reminded of issues in Toronto Pearson Airport's current luggage system, among other airports globally.
+What it does: Track Your SACK is a web-based application that works in tandem with existing airport infrastructure to accurately keep track of a passenger's baggage.
+How we built it: We created Track Your SACK using a combination of HTML, CSS, Bootstrap for the front end, as well as embedding Hypertrack's services for the luggage tracking.
+
+
+Inspiration: Traffic lights are one of the most dangerous parts of driving. According to the AAA, in 2017, 939 people were killed in red light running crashes. Red light cameras don’t solve the problem because they are reactive and not proactive. Many red light runners don’t even realize they’ve run a red light, and once a collision happens, it doesn’t matter if there was a camera or not.
+What it does: Our idea uses the live location, bearing, and speed, as well as the change of such data over time, for the current vehicle and all nearby vehicles, to predict if a car will run a red light and if that car has a chance of colliding with you. If this occurs, both drivers will be given an alert to stop, such that at least one of them is able to, avoiding the collision.
+How we built it: We used HyperTrack’s API to get the user's geoJSON location which includes all the information we need.  We also used Flutter and Dart to build the mobile user interface.
+
+
+Inspiration: Overloaded restaurant menus have been problematic for owners and customers alike. Having too many menu items leaves customers confused about what to pick, making it less likely for them to return in the future. We wanted to help restaurant owners to see which menu items to remove, while also keeping their signature dishes.
+What it does: Using eye-tracking, the user is able to gather analytics to which menu items customers spend the most time looking at. A heatmap is generated to visualize this.
+How we built it: Frontend: React, JavaScript
+Backend: Python, Flask
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Whether you're a girl digging through your closet or a boyfriend waiting hours after your girl, our app can alleviate some of the headaches of getting ready. Our inspiration stems from the human desire to live stress-free, and we figured that removing one large stressor, picking out your outfit, would be able to help alleviate a bit of stress in our busy lives.
+What it does: Our app lets you keep track of the ins and outs of your wardrobe, at glance. Through an implemented built-in camera functionality, the app is able to take and save pictures of different clothing items. As such, E-wardrobe is able to classify and organize clothing through different parameters.
+How we built it: The backend was built with NodeJS, ExpressJS, and MongoDB, with mongoose for schema validation. For the frontend, we used Angular and Ionic components as well as Capacitor to ultimately translate the web app we've made into a mobile app. We also have authentication through JWT. A mockup was also created with Figma. 
+
+
+Inspiration: I have a problem with managing expired foods. Many times over, I have disappointedly pulled jars 
+from my pantry that turned out to be a few years too old or grabbed cheese that was a little bit 
+greener than it should be. It haunts my dreams. So, I decided to build a solution: an app that can
+track my food for me. 
+What it does: Pantry is an all-in-one solution for managing the items in your pantry, from buying to eating. 
+Pantry will ensure you never have to ask yourself, Do we have milk at home? How old is our 
+bread? Do we have enough pasta? Pantry provides an easy interface for making grocery lists, 
+managing pantry items, and tracking grocery spending habits. It will help you cut down on food 
+waste in no time!
+How we built it: None
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: Taking high quality notes in a fast-paced environment such as lectures or business meetings can be daunting. One small distraction or typing error can leave you trying to play catch-up as your professor or manager speeds through the next set of important information. All of this is made even worse for slower typists. Thus, we have created a note-taking web application that assists in taking quick notes through the power of NLP.
+What it does: The FoxNote web application allows you to record hit the record button and watch as it generates a real-time transcript of the audio as well as succinct notes that you can edit on the fly. The live transcription is handled by AssemblyAI's API. We take this even further by regularly feeding chunks of the transcript into Cohere's NLP to summarize all the information to short and simple notes that you can edit or delete as you so wish.
+How we built it: The front-end of the web application is built using React. Upon pressing the record button, the application makes a call to AssemblyAI's Speech-to-Text API to begin real-time transcription of the audio. The client-side then stores chunks of the text to pass into our custom endpoint built using Python and FastAPI. This API serves as a wrapper around Cohere's API to allow for custom tweaking of the model's parameter for optimal results.
+
+
+Inspiration: As music lovers, we often search music pieces online for a variety of purposes; however, one may not always remember the piece name despite being able to hum the tune or fundamental chord of a song. This inspired us to create Me♪o (pronounced “melo” in melody), a web app that acts as a search engine specifically for musical pieces. 
+What it does: Melo is a music search engine designed to help musicians find the musical pieces that they are looking for. Songs can be searched in a traditional manner by name, artist, categories, etc.; however, a feature unique to Melo is that songs can be searched by a subset of notes that appear in them. In other words, users can enter notes in both staff and numbered musical notation to find songs in which the group of notes appear. 
+How we built it: We created our project with React and had two main pages (different routes). The first page (Home) contains the title and a search box which receives the data from the user and returns the musical pieces that have matching results. To get this info, we needed a database. Originally, we planned to use CockroachDB, but ended up using a JSON file as our backend since we were running out of time. The second page is a user guide to our webapp with a link to our GitHub repository, if the users choose to view the source code.
+
+
+Inspiration: We were inspired by the various tools provided at hack the north and were ecstatic to use them towards a hardware hack; something that none of us had ever done before. We knew that drone delivery was getting increasingly popular, but none were trying to assist in the medical field. So we decided that if we wanted a drone delivery service to be a service, then it had to provide something important to people; for example, medicine. During the Covid-19 pandemic, drones were used to deliver blood, medicine and supplies to the First Nation communities here, and also in Africa to remote communities. We wanted to bring this type of service to regular prescription drugs and getting these prescriptions to people urgently. 
+What it does: This API service provides a complete set of endpoints for other developers to interact with and build off of. The DJI Tello drone requires a python backend to interact with it, and so each time a user makes a delivery request, the request is sent to the python backend, which tells the drone to take off to the pharmacy and then to the location specified by the end user. The entire process is comprised of 3 parts. First, the drone supplier deploys their drone towards a specific pharmacy (The supplier is essentially anyone that signs up and has a drone they don't often use). Then, when the drone arrives at the pharmacy, the pharmacy's drone list is updated and the newly arrived drone is appended to the list. From the user side, they will be able to see whether the pharmacy is within range of delivery, and whether the pharmacy has any drones for this type of delivery. When the user places their order, this order must be manually approved by the pharmacy, and when it is approved, the drone is able to take off and fly towards the user's house, safely land and then return to the pharmacy. 
+How we built it: We used the DJI Trello drone and SDK to transport pills to and from the pharmacy. In our proof of concept, the drone travelled between points A and B in the drone room. Our attachments were modelled with the shape of the drone's body in mind, and we considered whether the propellers would interfere with it, should we have chosen to have it on the top.
+
+
+Inspiration: Physiotherapy is an important part of rehabilitation for physical injuries. A physiotherapist helps restore a patient’s mobility and prevents future injuries.
+What it does: Smart Heal gives you instructions and personally guides you through physiotherapy exercises in a fun and intuitive manner from the comfort of your home. The system consists of a Raspberry Pi and an IMU Sensor which is used to track the movement and orientation of any injured body part. Smart Heal also comes with a desktop app which I made to render a user’s current wrist orientation in a 3D virtual environment in real time.
+How we built it: The Raspberry Pi is the central hub which is responsible for processing all sensor data. The Pi interfaces with the IMU and runs a Kalman Filter. The Kalman Filter, which I specifically tuned, makes sure that the raw IMU data is as smooth as can be. With the filter turned on, jerky hand movements are stabilized in the 3D visualizer. 
+
+
+Inspiration: We took inspiration from the countless controversial social media posts that often appear online, many infamously posted by famous figures (I'm sure you can think of some). In order to prevent the spread of such heavy negativity throughout the internet and to preserve the ideal images of the celebrities we all love, we thought of a straightforward solution to help social media users keep themselves in check.
+What it does: Civility is a web application that analyzes text and provides metrics based on the social repercussions that a user may incur from posting online. Main factors include age warning, political group alignment, and toxicity level. All three indicators will give a message encouraging the user to do the suggested activities such as not posting or posting with caution. Some indicators will also give a percentage to show the confidence percentage of the suggestion. For example, a percent indicates which side of conservative vs liberal viewpoints the text is favouring.
+How we built it: We built Civility using Next.js, React, Material-UI, Express.js, and of course, the Cohere API. We used Figma for the early mockups of the design, CSP (somewhat scuffed replacement to Adobe Illustrator) for the logo, and Git for version control and collaboration. We were able to 'train' models in Cohere using external datasets we found online: one which classifies Twitter tweets as toxic or not, and one that labels political Reddit posts with a particular political alignment. More specifically, we were able to perform text classification using the classify endpoint and semantic search with the nearest neighbour search algorithm. Both methods produce a certain percentage of being 'correct' in regards to how accurate the label they attach to the example/input might be, which is also a statistic we show. For example - and you can try this for yourself - 'bruh' is 79% likely to be used in an offensive manner online (obviously).
+
+
+Inspiration: As we were coming up with ideas for this year's hackathon, we were amazed by the HackTheNorth nametags. We both thought that it was awesome to use QR codes to connect people, and was a great metaphor for all the technology happening at HackTheNorth. We wanted to continue this, and connect even more people with intriguing technology. This is why created GitHub Rooms.
+What it does: GitHub rooms is a tool that allows people to view and add to a repository of projects, which others have worked on in the same space. Anyone can create a room, providing them with a QR code that they can print out or display to anyone in the area. Then, anyone using the space will be able to scan it and upload what they have been working on. This is great for community spaces, where there is lots of varying development of tech, and it will enable people to connect with those in their community who share similar interests.
+How we built it: We built this with a full stack system, using React and Django. It was made with a SQL database for keeping track of all of the users and projects integrated into our system, and Django to process requests from the frontend. React is the frontend, which is quite dynamic and creates simplicity in the code.
+
+
+Inspiration: With the newfound prevalence of electric vehicles and the urgency of the earth's climate state, it has become more important to increase the accessibility and ease of adoption of environmentally friendly alternatives.
+What it does: This web application finds the user's current location and pinpoints it on an embedded Google Map. Then, using the user's location, the three closest electric vehicle charging locations are displayed.
+How we built it: Our front-end was created with HTML/CSS and Javascript. This was connected with a Python Flask backend. We also integrated the HTML Geolocation API, the NREL (National Renewable Energy Laboratory) developer network API, and the Google Maps Geocoding API.
+
+
+Inspiration: When we started hearing that some of our teachers and friends had stopped reading the news because it was too depressing, we knew there was a problem. There had to be a way to stay informed while staying positive.
+What it does: On Sanguine, users will be able to filter their news by answering a short survey to get more specific and positive news. Based on the optimism ranking and preference, users will get different news stories that interest them.
+How we built it: We used Figma to create a visual representation of Sanguine. Using Python and the co:here API, we programmed the basic backend of the website. Our skills and time were limited, but we were able to make a code that retrieves news articles using News API and prints out specific up to date articles based on what the user inputs.
+
+
+Inspiration: I believe in blockchain technology for the future and should be used in a day-to-day manner without any problem!
+What it does: Makes splitting crypto easier than ever before!
+How we built it: Learnt and tried to implement an MVP as soon as possible throughout the Hackathon!
+
+
+Inspiration: Biometric authentication on Linux isn't new. There's fprint for fingerprint authentication. Problem: not accessible to people without fingerprints, with dirty fingers, carrying things, cooking, etc. There's Howdy for facial recognition. Problem: not accessible in low-light conditions, and sometimes racially biased. Solution: a voice authentication system. We looked, but despite the multitude of speech recognition services offered on- and off-line, there isn't one. Thus, we decided to create our own PAM-based speaker verification system for Linux authentication.
+What it does: GMM algorithm in Python, PAM module in C, and some interfacing in the middle.
+How we built it: GMM algorithm in Python, PAM module in C, and some interfacing in the middle.
+
+
+Inspiration: We were always amazed at videos of people spending countless hours on drawing flipbooks. Since we lack the artistic skill to do something like that we decided to create a program that creates such flipbooks by taking in a video.
+What it does: Sketchbook-Animator is a computer program that takes in input as a video and renders it frame by frame into a cool sketchbook animation. 
+How we built it: We used Numpy and OpenCV to create the Sketchbook image tracing. The OS library is used to take the video and split it frame by frame and write the images in order into a file, the it takes the images in the file and renders them into the final video. 
+
+
+Inspiration: Will.i.am had inspired us with his opening speech at Hack the North 2022. We took his example of combining tech with music to heart. Rather than music we wanted to spread knowledge through other important skills, reading and collaboration.
+What it does: CrowdStory is a web application that allows users to create open source stories that can be contributed by people all around the world and allows the reader to get a taste of many different experiences and thoughts instead of something said by 1 figure. Each story has ai-generated thumbnails and titles, constantly changing to fit the ever-changing story. Additionally, discover stories to add onto, like them, save them, share them, comment on them and more.
+How we built it: We built this website in the Node.js environment using Typescript, React.js, mongodb, express.js and Figma to design our website. 
+
+
+Inspiration: Struggling with a hackathon concept made our team realize the importance of gathering inspiration and connecting ideas. This led us to further research products in the market that are aimed towards this space, and we found many pain points that made the process less efficient, including an influx of onboarding processes, new tools, and distracting interfaces. 
+What it does: Myos is a very efficient moodboarding app which lets users attach various files ranging from images, audios, and drawings, all through flexible formats such as drag-and-drop, copy+paste, and uploading local files. Users can organize the files into groups to create a “gallery” of inspiration for your various projects or moodboarding-related needs. 
+How we built it: We designed our product on Figma and prototyped it’s key interactions. A ReactJS frontend was made to implement a file upload function and a display gallery.
+
+
+Inspiration: With the emergence of AI generation technology such as style-gan, mid-journey, and DALL-E, our team decided to focus on a project that would explore the possibilities of such technology in a cool and interactive way. Meet DrawBot, an AI-powered image generation robot that draws whatever masterpiece you have in mind onto physical paper. (This is also our team’s first hardware hack!)
+What it does: Whenever you have a masterpiece in mind but don’t have the artistic talent for it, simply narrate your idea into our frontend app and we’ll create your artwork for you! This feat was accomplished by utilizing AssemblyAI for speech-to-text input, Stable Diffusion for image generation, and a gantry system to bring your ideas to life.
+How we built it: Getting User Input: Speech-to-Text with AssemblyAI, Web App with Express.js
+DrawBot first creates a transcription of speech input using AssemblyAI’s real-time speech-to-text API. Our web app allows the user to record their desired image prompt, then automatically uploads and transcribes their speech using AssemblyAI. It then sends the final formatted image prompt to be used with Stable Diffusion, along with important keywords to ensure that the generated image would work well with the rest of our pipeline.
+
+
+Inspiration: After seeing how easy it is to accidentally bump into objects while driving or parking, most notably when not paying attention to your blindspots, we felt it would be highly beneficial to develop prototype software for preventing these cases.
+What it does: This product detects the distance from the car to the nearest potential collision. When the tracker determines the distance to be at risk of a collision or bump, it will bring the vehicle to a stop. From there, the vehicle will be able to manipulate its direction in order to continue in a safe path.
+How we built it: We built this primarily using an Arduino, the Arduino software (coded in C++) and an ultrasonic distance tracker in order to implement real-time collision detection. Additionally, in order to develop the robot, we needed to 3D print the wheels and create a chassis in order to contain, house, and support all of our components. 
+
+
+Inspiration: As students, we find ourselves reading a lot of scholarly articles. To streamline this process, we use the power of NLP to help us search for meaning and context.
+What it does: It takes keywords in and uses semantic search to find relevant paragraphs in meaning and context.
+How we built it: We use Cohere's API to integrate NLP to train a model and compare similar text in meaning. We also used React JS for the frontend demo and Flask as the backend to connect the frontend to the language processing code.
+
+
+Inspiration: We love being waterloo students so much we had to turn it into a game.
+What it does: You are a waterloo student, and you have many problems to overcome and goals to accomplish both IRL and in this game.
+How we built it: We used react.js, planned to use CockroachDB to save user info, and store game information. Also used Co:here to generate dialogue with other virtual uwaterloo students.
+
+
+Inspiration: Almost everyone has felt the effects of procrastination at least one time in their life. Procrastination pushes projects and assignments back, leaving little to no time to finish the project. One of the largest parts of an assignment is the research, which requires tons of reading in order to connect and create a meaningful product. The process of reading takes time, dependent on the individual's reading speed. Reading speed is something that can be cut down with practice, and where we gained inspiration for this project. We wanted to help improve the monotonous process of reading through pages and blurbs of text, and thus this chrome extension was made!
+What it does: Our app has two main features. The first feature helps provide the user with more information, to enhance their reading experience. It does this by providing the user with information about how many words are being displayed on the webpage at a current time, and also how many minutes it would approximately take (for the average) human to read through it, to provide a sense of scale. The second feature is designed to help the user improve their reading speed. They are given a list of 100 words, and are instructed to time themselves to discover their own reading speed. The user can then use this statistic to track their progress, and also as an incentive to improve. 
+How we built it: We used a chrome extension to create this app. It utilizes HTML, CSS, JS. HTML and CSS are used to display the content to the user, while JS was used to provide functionality to the elements presented in the HTML and CSS. We began by building a basic HTML template to test things on, before implementing both features and applying them to our full HTML and CSS presentation.
+
+
+Inspiration: Always wanted to have a personal website, though why not now. 
+What it does: Maybe implement a similar concept on React. 
+How we built it: Maybe implement a similar concept on React. 
+
+
+Inspiration: Studying and working are completely different. But, one common thing between experiencing a study term and an internship that we noticed was that sometimes we wanted to have someone to talk to. But, evidently that's sometimes impossible, so given that we wanted to explore a little bit with AI and our drive to solve our problems for future terms (where school only gets harder), we brought λlbert to life.
+What it does: λlbert is your best friend! it simply requests you to talk (with your voice!) about something that you want to get off your chest. Then, based on that and what's been happening in the conversation previously, it will respond to you. This can be used in multiple ways -- therapy, entertainment, and so on. λlbert will never get bored of you, and frankly you also won't get bored of λlbert.
+How we built it: To run the backend, we use NodeJS and Express to manipulate given data to make calls to the Cohere API. This made the logic and error handling relatively simple, as our complementing frontend was built with HTML, CSS, and Typescript. The audio recordings that were taken in were converted to text using Assembly AI, and then the brains of λlbert were made using the Cohere API.
+
+
+Inspiration: None
+What it does: None
+How we built it: None
+
+
+Inspiration: As students transition back into in person classes, housing search will pile on to the numerous challenges students already face. Sadly, the vaccine does not provide us immunity to the housing crisis students face so we had to generate our own vaccine called Spot. The frustration of messaging multiple landlords on a variety of platforms while keeping track of all the location addresses was the main drive for our project idea.
+What it does: Spotᵀᴹ is a housing market platform where tenants and landlords can match based on preference and compatibility. By incorporating the simple match system from Tinder, tenants can breeze through housing applications curated towards their housing preferences while landlords get the luxury of a clear tenant application with no text fluff. The instantaneous matching feature and profile customization seeks to condense and simplify the rental process for tenants and landlords alike. 
+How we built it: We built Spot with React, AWS, GraphQL, Typescript, Amplify, and DynamoDB . We used Amplify throughout as it helped with user authentication, creating GraphQL APIs, and setting up our database.
+
+
+Inspiration: With all of us playing different sports, we know that the most important part of movement starts at the base: the feet. For athletes and those with movement impairments alike, having more data on how the feet move (namely how fast they move) can give valuable insights into enhancing movement. We developed Smart-kicks to combine the power of embedded smart shoes and of computer-vision tracking systems. Athletes can use it to improve their training, those who get injured can use it for rehab, or people with disabilities can use it for QOL improvements.
+What it does: Smart-kicks is a smart shoe system to gather data about foot movement. Our prototype currently tracks foot speed, and clips onto a user's laces to instantly make a shoe "smart". The shoe connects to the internet via the WiFi ESP32 chip, and posts the foot speed data to our web app, which inserts it into CockroachDB Serverless in real time.
+How we built it: The smart shoe used an Arduino Uno to calculate foot velocity in real-time, then transmitted the data to an ESP32 chip via serial communication (UART protocol). Then, the ESP32 POSTs the data to an endpoint on our deployed Express app, which stores it in CockroachDB. To actually calculate velocity, we have a 3-axis gyroscope and accelerometer (MPU6050) attached to the Arduino. We use the gyroscope to remove the effect of gravity from the acceleration by applying a rotation matrix, then we integrate the acceleration to get the velocity. All components reside in a laser-cut board that can be clipped onto a user's laces.
+
+
+Inspiration: The process of renting is often tedious, repetitive, and exhausting for both renters and landlords. Why not make it efficient, fun, and enjoyable instead? For renters, no more desperately sifting through Marketplace, Craigslist, and shooting messages and applications into an abyss. For landlords, no more keeping track of prospective tenants' references and rent history through a series of back-and-forth messages.
+What it does: Rent2Be is a mobile application that borrows from Tinder's iconic concept of swiping left and right, effectively streamlining the renting process for both renters and landlords. Find your perfect match, truly rent to be!
+How we built it: There are so many features in the future of Rent2Be!
+
+
+Inspiration: In 2019, close to 400 people in Canada died due to distracted drivers. They also cause an estimated $102.3 million worth of damages. While some modern cars have pedestrian collision avoidance systems, most drivers on the road lack the technology to audibly cue the driver if they may be distracted. We want to improve driver attentiveness and safety in high pedestrian areas such as crosswalks, parking lots, and residential areas. Our solution is more economical and easier to implement than installing a full suite of sensors and software onto an existing car, which makes it perfect for users who want peace of mind for themselves and their loved ones.
+What it does: EyeWare combines the eye-tracking capabilities of the AdHawk MindLink with the onboard camera to provide pedestrian tracking and driver attentiveness feedback through audio cues. We label the pedestrian based on their risk of collision; GREEN for seen pedestrians, YELLOW for unseen far pedestrians, and RED for unseen near pedestrians. A warning chime is played when the pedestrian gets too close to get the driver. 
+How we built it: Using the onboard camera of the AdHawk MindLink, we pass video to the openCV machine learning algorithm to classify and detect people (pedestrians) based on their perceived distance from the user and assign them unique IDs. Simultaneously, we use the AdHawk Python API to track the user's gaze and cross-reference the detected pedestrians to ensure that the driver has seen the pedestrian.
+
+
+Inspiration: This project was inspired by Notion. As a person who gets distracted a lot, I decided to create a chrome extension that promotes productivity in a way that is easily accessible, and visually pleasing.
+What it does: The chrome extension is named after Notion, a popular productivity website. In the extension, users can create to-do lists, and look at weather and news stories in the area. Additionally, the user can customize the way the extension looks on their screen to ensure optimal usage. 
+How we built it: None
+
+
+Inspiration: Do you ever wish you could just walk down the street and chat up will.i.am? Do you ever want the motivation to explore your city, with the spontaneity and fun of encountering virtual friends as an incentive? Do you want to build friendships with AI characters? 👬🏙️🗺️
+What it does: Walk around and discover virtual friends through the camera view. Think Pokemon-Go, but for virtual friends! The use cases are numerous and caters to individual needs.
+How we built it: React Native, Express, SQL server on CockroachDB, Postgresql, AssemblyAI, Cohere API
+
+
+Inspiration: Waking up can sometimes be a nuisance, especially after snoozing your alarm multiple times and then waking up an hour later than you planned. Understanding that a large audience faces this issue, more specifically students in the teenage age group and adults as well, we decided to design and implement our take on this problem. We understand that it can be hard to function after waking up, especially for people who work and students who have to study. Our approach to solving this problem will tackle just that.
+What it does: This alarm clock functions like an ordinary alarm clock but will instead ring its alarm sound until the user wakes up and solves a problem or does any small activity. Upon the completion of said activity, the alarm will go off, which will ensure that the person does not go back to sleep and follows the schedule they have set for the day.
+How we built it: We built this project on the Repl-It online IDE to ensure effective collaboration among team members. We coded the application in the python program and implemented it in the Tkinter GUI framework as a prototype of the planned application. We also used Figma to create our intended UI for the final application.
+
+
+Inspiration: We were inspired by projects that were mainly for humor, and not for real necessity.
+What it does: The Punch Machine when ran releases the scissor lift that then is pulled down by weights (the water bottles) and the scissor lift is then extended and performs a punch.
+How we built it: We first created the scissor lift, by using the materials provided to us and going to Home Depot for other materials that were needed. We then laser cut the plastic materials to fit screws and put nuts over them so it is stable. We then attached the machine to the cardboard. Afterward, we wrote the Arduino code to perform the release of the scissor lift and finally added the Arduino and motor to the cardboard.
+
+
+Inspiration: Have you ever had to awkwardly explain to an older friend or relative what words like "lit", "fire", "cringe" and "poggers" mean? I know I have, far too many times. Sling serves as a bridge between the modern day lexicon and those whose heydays are now in the past (or who are just old at heart), allowing them to fully integrate into and embrace internet culture.
+What it does: Users are prompted to give a sentence or phrase as input to the website. The interface is intentionally left simple and easy to navigate, to help improve accessibility, especially for those who may not be well versed with the internet or technology. After giving this input, the user submits it and is given an evaluation of the meaning behind the input they gave, highlighting both the subject of the text as well as the general sentiment behind it. 
+How we built it: Developing the backend of Sling actually required two NLP models both using sentiment analysis. The first was used to develop a training dataset of slang terminology to be used for training the second. This was done by scraping over 60000 words and definitions from Urban Dictionary. The highest ranked definition was then used as the de facto definition upon which to conduct sentiment analysis. The sentiment analysis score of the definition was then used as the sentiment analysis score of the word, thus creating a thorough dataset of slang terminology. A second sentiment analysis model was then trained upon this dataset. 
+
+
+Inspiration: We recognized the efficiency that Github Copilot brought to development, and we wanted to do something similar for another industry. Rather than just having Copilot for development, we wanted to use the powers of Copilot for making beautiful UI designs in a fraction of the time that it would normally take. 
+What it does: Figma Copilot analyzes your existing UI, and generates new suggestions for you to improve your UI using AI.  
+How we built it: We built a Figma plugin using Typescript, which sent prompts to a GBC which in turn sends them to Stable Diffusion. 
+
+
+Inspiration: Being a highschool student in Canada, I often find myself studying languages, whether that be English or French. However, when learning these languages, I noticed that there weren't any resources to help ease the hardest part of learning a language -- listening! Such resources, if they exist, are inconvenient for the user as they would need to annoyingly navigate to the page, register for an account, and, finally, pay a potentially outrageous toll just to learn the languages they love! Motivated by this, I set out to create LangBot.
+What it does: LangBot is a Discord bot that helps people train their ears for a particular language. It works by requesting a language (only English currently, unfortunately) and a difficulty. It then gives the user an audio file whose difficulty corresponds to the difficulty chosen. The user then has 10 seconds to enter exactly what they hear, earning points based on how close the user is to the actual sentence. 
+How we built it: To build the framework for the bot, discord.py was used to communicate with the Discord API. To determine the actual answer for the audio file, AssemblyAI's voice-to-text transcript API was used. Finally, to store the user's progress, Cockroach Database was used.
+
+
+Inspiration: Our inspiration was our experience as university students at the University of Waterloo. During the pandemic, most of our lectures were held online. This resulted in us having several hours of lectures to watch each day. Many of our peers would put videos at 2x speed to get through all the lectures, but we found that this could result in us missing certain details. We wanted to build a website that could help students get through long lectures quickly.
+What it does: Using our website, you can paste the link to most audio and video file types. The website will take the link and provide you with the transcript of the audio/video you sent as well as a summary of that content. The summary includes a title for the audio/video, the synopsis, and the main takeaway.
+How we built it: To start, we created wireframes using Figma. Once we decided on a general layout, we built the website using HTML, CSS, Sass, Bootstrap, and JavaScript. The AssemblyAI Speech-to-Text API handles the processing of the video/audio and returns the information required for the transcript and summary. All files are hosted in our GitHub repository. We deployed our website using Netlify and purchased our domain name from Domain.com. The logo was created in Canva.
+
+
+Inspiration: Food waste is a major problem throughout households; we decided to make a creative solution to combat this problem
+What it does: In order to prevent food waste, you input your spare ingredients into the website. It runs through our custom trained co:here model, and recommends you a detailed recipe on how to cook your food.
+How we built it: First we used public data on recipes, prune it through python to create a readible dataset.
+We then create a fine tuned model using co:here for training.
+Finally, we create a react front-end, and using a FastAPI backend to interact with our co:here model in order to suggest a proper recipe to users!
+
+
+Inspiration: I started investing in a Tax-Free Savings Account (TFSA) at the beginning of 2022 and encountered difficulties in tracking my activity over time and understanding the historical relationships between stocks.
+What it does: The Stock Portfolio App is a desktop application built with Python. It allows users to simulate purchase and selling activities and provides high-level insights to maximize profits when deciding to sell a stock on a particular date.
+How we built it: The project consists of three major components:
+
+
+Inspiration: We know that at Hack the North, and other similar Hackathon events, finding the right team can sometimes be one of the most crucial things when it comes to success. Groups with a wide range of skills tend to do better than solely tech or business-based. That's how we came up with Hatch, here to find your perfect Hackathon Match. 
+What it does: Hatch is a web-based application that helps Hackathon participants find their perfect team. Based on the skillset needed for your team, the system will search the database for applicants that are most suitable for you. Through a card system, the team and applicant may send requests to each other to connect further. Both parties may then accept or reject the merger of the teams. In a matter of a few swipes, you are ready for your next Hackathon! 
+How we built it: The design of the website was prototyped in Figma. From there, the front end is built using React JS. We used CockroachDB to store the data and we used express.js to connect the frontend to the backend.
+
+
+Inspiration: Our team was trying to find a problem to solve, and with that, we realized that having appropriate vocabulary for certain situations can be important. This is especially true given job interviews, and other formal presentations. One demographic we would like to help improve upon this is kids, who through our game, will both be challenged, have fun, and expand their vocabulary along the way.
+What it does: This game provides users with the chance to build their vocabulary skills while having fun by comparing words with their synonyms via our Goose themed web front-end. Scores are generated by the relevance and uniqueness of words entered. Users are given 30 seconds from pressing a 'Go' Button to guess as many relevant synonyms as possible.
+How we built it: We built an API, back-end database, and front-end UI via web to make our game work.
+
+
+Inspiration: Hunger is what inspired us to create this bold yet innovative project with the potential to change the world. The food at Hack the North was filling but not satisfying. We inevitably needed to cook for ourselves. Our idea was to find the best recipes by scraping the internet.
+What it does: By searching a meal in our home page, the application scrapes the web to find a list of ingredients for any amateur cooks who are bad at cooking.
+How we built it: We built it with a React Framework using mainly JavaScript and Python.
+
+
+Inspiration: We were interested in web development and we all enjoy basketball. This was the first in-person hackathon for most of our team members, and all of us are beginner hackers, so we decided to make something simple yet able to accomplish a useful goal.
+What it does: The website allows users to enter two different NBA teams and it will display side-by-side stats, as well as the expected win percentage of both teams in a head-to-head match, making it useful for statistical analysis in sports betting, or for basketball enthusiasts in general.
+How we built it: The website was built using HTML, CSS, and Javascript with React as a framework. We used a simple API developed to gather NBA stats, https://www.balldontlie.io
+
+
+Inspiration: As university students with little time management and an overwhelming amount of work, it is crucial to correctly manage our time on the internet.
+What it does: MonitUr-time is a Chrome extension with the purpose of tracking your daily Chrome activity. Measurements like taxonomy, how long you frequent each tab, and comparisons between time intervals are all tracked in the background of our everyday browsing which we can open in one simple popup.
+How we built it: We used HTML for the extension popup, and JavaScript to interact with Chrome's API, Manifest. Manifest was able to gather the current URL the user is on, and by manipulating the string, we are able to convert it into the company's name. By gathering the time step of each iteration, we are also able to calculate how long the user stays on each tab.
+
+
+Inspiration: Ever stared at an audio recording of a project for a class wondering if it was "too mean" or if you "accidentally" let an inappropriate joke slip out of your mouth? Tenacity is here to validate you! Our application will scan your audio file for a variety of different metrics - tone of voice, words that would get you fired, and even the number of times you stuttered. 
+What it does: Tenacity analyzes audio clips submitted by users and displays some of the more relevant insights for users to decide what to do with the clip.  
+How we built it: We built Tenacity with Vite and Create React App with the AssemblyAI API. We used Tailwind for styling and react-router for routing. 
+
+
+Inspiration: Relocation/moving is a messy, frenetic process. When moving from address A to B,  the ultimate task of notifying people and companies of a new address stands in the way of all. For example, moving.com lists 19 companies you must inform, which includes the post office, tax agencies and banks. This process is tedious, and if you miss something vital, this could lead to missed bills or other serious consequences.
+What it does: None
+How we built it: Zinc - ANS (Server Side) was built with Django and Django REST Framework, alongside an Android Flutter Application integrated with Firebase Cloud Messaging. A Flask server was also used to mimic an enterprises's, who's servers will be actively listening for a webhook from ANS upon address change.
+
+
+Inspiration: Modern search engines and browsers excel at finding content that suites users preferences. However, as consequence of their precision users are becoming more unconsciously biased in terms of the media they consume. To counter this, we created Elder^_^Bro (the counter-opposite of Big Brother) to help users reflect on the content they are (and aren't) exposing themselves to in order to promote a more open-minded online community.
+What it does: By activating a session with Elder^_^Bro, he will accompany you as search through various websites, and he will note down the biases of the webpages you view. Afterwards, he'll give you a report about the bias of your overall session.
+How we built it: Our backend was built using FastAPI, Python, and Pipenv for the python environment. We used the Cohere API to generate a summary of one's chrome history. The Chrome browser extension was built using axios, javascript, html, and css. 
+
+
+Inspiration: Reading and comprehension is a fundamental part of a modern society, yet can very often be hindered by factors out of our control. Whether it is Dyslexia,  Impaired vision, small text or complicated text, reading can become so much easier if we were to apply some eye tracking.
+What it does: None
+How we built it: The program is ran on Javascript, and the Example is ran on a HTML5/CSS website.
+
+
